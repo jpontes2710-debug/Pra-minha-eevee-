@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="locked">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f1f7ff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151217" media="(prefers-color-scheme: dark)">
+<title>Pra minha Eevee</title>
+<meta name="description" content="Eu fiz uma coisinha pra você.">
+<meta property="og:title" content="Pra minha Eevee 💙">
+<meta property="og:description" content="Eu fiz uma coisinha pra você.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8D%A6%3C/text%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("eevee-tema");if(t==="preto"||t==="rosa"||t==="azul")document.documentElement.classList.add("tema-"+t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700&family=Sniglet:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f1f7ff;
+  --dot:#c6dcf5;
+  --paper:#fffdf8;
+  --paper-line:#d2e2f4;
+  --line:#d4e4f6;
+  --ink:#29324f;
+  --ink-soft:#5d6888;
+  --berry:#3f86de;
+  --berry-ink:#2a63ad;
+  --trail:#a7c2e4;
+  --nav:rgba(241,247,255,.94);
+  --shadow:rgba(52,86,140,.28);
+  --lift:rgba(41,50,79,.10);
+  --scrim:rgba(30,40,70,.45);
+  --btn:#2f74cf;
+  --on-btn:#ffffff;
+  --word-shadow:rgba(41,50,79,.16);
+  --obj-ink:#3d2c3e;
+  --pink:#ffd6e6;
+  --lilac:#e3d8ff;
+  --vanilla:#fff0bf;
+  --sky:#cfe6ff;
+  --mint:#cdf1de;
+  --her-paper:#ffeef5;
+  --hl:rgba(255,206,92,.75);
+  --him-paper:#fff7e2;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1830;
+    --dot:#2e2949;
+    --paper:#272140;
+    --paper-line:#3b3360;
+    --line:#383058;
+    --ink:#fbeef6;
+    --ink-soft:#cbb6d2;
+    --berry:#ff8fbf;
+    --berry-ink:#ffb3d4;
+    --trail:#6c5c90;
+    --nav:rgba(28,24,48,.94);
+    --shadow:rgba(0,0,0,.6);
+    --lift:rgba(0,0,0,.25);
+    --scrim:rgba(8,4,16,.62);
+    --btn:#ff8fbf;
+    --on-btn:#2a1530;
+    --word-shadow:rgba(0,0,0,.45);
+    --her-paper:#33243f;
+    --hl:rgba(255,196,80,.38);
+    --him-paper:#232b47;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1830;
+  --dot:#2e2949;
+  --paper:#272140;
+  --paper-line:#3b3360;
+  --line:#383058;
+  --ink:#fbeef6;
+  --ink-soft:#cbb6d2;
+  --berry:#ff8fbf;
+  --berry-ink:#ffb3d4;
+  --trail:#6c5c90;
+  --nav:rgba(28,24,48,.94);
+  --shadow:rgba(0,0,0,.6);
+  --lift:rgba(0,0,0,.25);
+  --scrim:rgba(8,4,16,.62);
+  --btn:#ff8fbf;
+  --on-btn:#2a1530;
+  --word-shadow:rgba(0,0,0,.45);
+  --her-paper:#33243f;
+  --hl:rgba(255,196,80,.38);
+  --him-paper:#232b47;
+  color-scheme:dark;
+}
+
+/* tudo preto: o modo escuro tem a cor do estilo dela */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151217;--dot:#2a2330;--paper:#211c26;--paper-line:#3a3142;--line:#33293a;
+    --ink:#fbeef6;--ink-soft:#cbb6d2;--berry:#ff8fbf;--berry-ink:#ffb3d4;--trail:#6e5a78;
+    --nav:rgba(21,18,23,.94);--shadow:rgba(0,0,0,.6);--lift:rgba(0,0,0,.3);--scrim:rgba(0,0,0,.62);
+    --btn:#ff8fbf;--on-btn:#2a1530;--word-shadow:rgba(0,0,0,.5);
+    --her-paper:#2c2030;--hl:rgba(255,196,80,.38);--him-paper:#1f2433;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"],:root.tema-preto{
+  --bg:#151217;--dot:#2a2330;--paper:#211c26;--paper-line:#3a3142;--line:#33293a;
+  --ink:#fbeef6;--ink-soft:#cbb6d2;--berry:#ff8fbf;--berry-ink:#ffb3d4;--trail:#6e5a78;
+  --nav:rgba(21,18,23,.94);--shadow:rgba(0,0,0,.6);--lift:rgba(0,0,0,.3);--scrim:rgba(0,0,0,.62);
+  --btn:#ff8fbf;--on-btn:#2a1530;--word-shadow:rgba(0,0,0,.5);
+  --her-paper:#2c2030;--hl:rgba(255,196,80,.38);--him-paper:#1f2433;
+  color-scheme:dark;
+}
+:root.tema-rosa{
+  --bg:#fff4f8;--dot:#f2cadc;--paper:#fffaf1;--paper-line:#f4d3e1;--line:#f1d2e1;
+  --ink:#3d2c3e;--ink-soft:#7a5d76;--berry:#e9568f;--berry-ink:#b2336d;--trail:#d2a9bf;
+  --nav:rgba(255,244,248,.94);--shadow:rgba(74,46,69,.32);--lift:rgba(61,44,62,.10);--scrim:rgba(61,44,62,.45);
+  --btn:#c93f7c;--on-btn:#ffffff;--word-shadow:rgba(61,44,62,.16);
+  --her-paper:#ffeef5;--hl:rgba(255,206,92,.75);--him-paper:#eaf3ff;
+  color-scheme:light;
+}
+:root.tema-azul{
+  --bg:#f1f7ff;--dot:#c6dcf5;--paper:#fffdf8;--paper-line:#d2e2f4;--line:#d4e4f6;
+  --ink:#29324f;--ink-soft:#5d6888;--berry:#3f86de;--berry-ink:#2a63ad;--trail:#a7c2e4;
+  --nav:rgba(241,247,255,.94);--shadow:rgba(52,86,140,.28);--lift:rgba(41,50,79,.10);--scrim:rgba(30,40,70,.45);
+  --btn:#2f74cf;--on-btn:#ffffff;--word-shadow:rgba(41,50,79,.16);
+  --her-paper:#ffeef5;--hl:rgba(255,206,92,.75);--him-paper:#fff7e2;
+  color-scheme:light;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.locked,html.locked body{overflow:hidden}
+body{
+  margin:0;
+  background-color:var(--bg);
+  background-image:radial-gradient(var(--dot) 1.3px,transparent 1.6px);
+  background-size:22px 22px;
+  color:var(--ink);
+  font-family:"Shantell Sans",ui-rounded,"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-weight:800;margin:0;line-height:1.1;text-wrap:balance}
+p,figure{margin:0}
+
+.app{max-width:480px;margin:0 auto;padding:22px 18px 108px}
+.panel{display:none}
+.panel.on{display:block;animation:fade .3s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* letreiro de adesivo */
+.sticker-word{
+  display:inline-block;color:var(--berry);transform:rotate(-3deg);letter-spacing:.01em;
+  text-shadow:
+    0 4px 0 #fff,0 -4px 0 #fff,4px 0 0 #fff,-4px 0 0 #fff,
+    3px 3px 0 #fff,-3px 3px 0 #fff,3px -3px 0 #fff,-3px -3px 0 #fff,
+    2px 4px 0 #fff,-2px 4px 0 #fff,4px 2px 0 #fff,-4px 2px 0 #fff,
+    2px -4px 0 #fff,-2px -4px 0 #fff,4px -2px 0 #fff,-4px -2px 0 #fff,
+    0 9px 0 var(--word-shadow);
+}
+.stk{filter:drop-shadow(0 2px 0 var(--lift)) drop-shadow(0 8px 10px var(--lift))}
+
+/* início */
+.hero{text-align:center;padding-top:10px}
+.hero h1{font-size:60px;margin-top:4px}
+.hand{font-size:18px;color:var(--ink-soft);margin-top:16px}
+.mascot-btn{display:block;margin:8px auto 0;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent;width:min(240px,70vw);border-radius:50%;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.mascot-btn:active{transform:scale(.94) rotate(-3deg)}
+.mascot-btn svg{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 14px var(--lift))}
+.hint{font-size:14px;color:var(--ink-soft);margin:4px 0 22px}
+
+.tickets{display:grid;gap:16px}
+.ticket{position:relative;display:flex;background:var(--tk);color:var(--obj-ink);border-radius:14px;box-shadow:0 2px 0 rgba(61,44,62,.10),0 14px 22px -16px var(--shadow)}
+.t-vanilla{--tk:#fff0bf}
+.t-pink{--tk:#ffd9e8;transform:rotate(.6deg)}
+.t-lilac{--tk:#e8ddff;transform:rotate(-.3deg)}
+.today{font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:20px;line-height:1.25}
+.t-vanilla{transform:rotate(-.6deg)}
+.ticket::before,.ticket::after{content:"";position:absolute;left:60px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--bg)}
+.ticket::before{top:-8px}
+.ticket::after{bottom:-8px}
+.stub{width:60px;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px dashed rgba(61,44,62,.28);padding:10px 0}
+.stub b{font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:28px;line-height:1}
+.stub span{font-size:14px;font-weight:600}
+.tbody{flex:1;min-width:0;padding:12px 12px 12px 14px}
+.tt{font-size:15px;font-weight:600;line-height:1.3;margin-bottom:9px}
+.units{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.units div{text-align:center;background:rgba(255,255,255,.62);border-radius:10px;padding:6px 0 4px}
+.units b{display:block;font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+.units span{font-size:12px;font-weight:600;color:rgba(61,44,62,.78)}
+
+/* papel e fita */
+.note{position:relative;background:var(--paper);border-radius:6px;padding:24px 18px 18px;box-shadow:0 1px 0 var(--lift),0 14px 24px -16px var(--shadow)}
+.tilt-l{transform:rotate(-1deg)}
+.tilt-r{transform:rotate(1deg)}
+.tape{position:absolute;top:-11px;left:50%;width:86px;height:24px;margin-left:-43px;transform:rotate(-4deg);border-radius:2px;opacity:.9;background:var(--tape);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.42) 0 5px,transparent 5px 11px);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.tape-pink{--tape:#ffb8d2}
+.tape-sky{--tape:#a9d3ff}
+.tape-lilac{--tape:#cdb9ff}
+.tape-mint{--tape:#a8e6c6}
+.tape-vanilla{--tape:#ffe08f}
+.home-note{margin-top:30px}
+.home-note p{font-size:16.5px}
+
+/* cabeçalhos das abas */
+.page-head{text-align:center;margin:6px 0 28px}
+.page-head h2{font-size:36px;color:var(--ink)}
+.page-head p{margin-top:8px;color:var(--ink-soft);font-size:16px}
+
+/* linha do tempo: trilha de formiguinha */
+.tl{position:relative;list-style:none;margin:0;padding:0 0 0 38px}
+.tl::before{
+  content:"";position:absolute;left:6px;top:4px;bottom:-26px;width:14px;
+  background:
+    radial-gradient(circle at 4px 4px,var(--trail) 1.8px,transparent 2.3px) 0 0/14px 16px repeat-y,
+    radial-gradient(circle at 10px 12px,var(--trail) 1.8px,transparent 2.3px) 0 0/14px 16px repeat-y;
+}
+.tl>li{position:relative;margin-bottom:32px}
+.tl>li:last-child{margin-bottom:0}
+.pin{position:absolute;left:-38px;top:16px;width:26px;height:26px}
+.pin svg{display:block;width:26px;height:26px;fill:var(--berry);stroke:#fff;stroke-width:2.5;paint-order:stroke;filter:drop-shadow(0 2px 2px var(--lift))}
+.tl .note .stk{position:absolute;top:-16px;right:-10px;width:72px;height:72px;transform:rotate(8deg)}
+.tl>li:nth-child(even) .note .stk{transform:rotate(-7deg)}
+.when{font-size:14px;font-weight:600;color:var(--berry-ink);padding-right:58px}
+.tl h3{font-size:22px;margin:3px 0 10px;padding-right:58px;color:var(--ink)}
+.txt{font-size:16.5px}
+.trail-end{width:44px;height:44px;margin:0 0 0 -9px}
+.trail-end svg{display:block;width:44px;height:44px;transform:rotate(-14deg)}
+
+.polas{display:flex;justify-content:center;align-items:flex-start;gap:14px;margin-top:18px;padding-bottom:4px}
+.pola{position:relative;flex:0 1 150px;background:#fff;padding:9px 9px 10px;border-radius:3px;box-shadow:0 1px 0 rgba(61,44,62,.08),0 12px 20px -12px rgba(61,44,62,.5);transform:rotate(-4deg)}
+.pola+.pola{transform:rotate(3deg);margin-top:12px}
+.pola .tape{top:-10px;width:56px;margin-left:-28px}
+.ph{aspect-ratio:1/1;border-radius:2px;background:#fdf2f7;border:2px dashed #efb1cb;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#c4769a;font-size:13px;font-weight:600}
+.ph svg{width:30px;height:30px}
+.cap{font-size:15px;line-height:1.25;color:#3d2c3e;text-align:center;margin-top:8px}
+
+/* você */
+.avatar{width:96px;height:96px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(135deg,#ffd6e7,#d3e7ff);border:5px solid #fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 0 var(--lift),0 10px 18px -8px var(--shadow)}
+.avatar svg{width:76px;height:76px}
+.sheet{background:var(--paper);border-radius:18px;padding:4px 16px;box-shadow:0 1px 0 var(--lift),0 16px 28px -18px var(--shadow)}
+.item{display:flex;align-items:center;gap:14px;padding:16px 0}
+.item+.item{border-top:2px dashed var(--paper-line)}
+.item.flip{flex-direction:row-reverse}
+.item .stk{width:84px;height:84px;flex:none;transform:rotate(-6deg)}
+.item.flip .stk{transform:rotate(6deg)}
+.item h3{font-size:20px;margin-bottom:4px}
+.item p{font-size:16px;line-height:1.45}
+
+/* motivos */
+.progress{text-align:center;font-size:15px;font-weight:600;color:var(--ink-soft);margin:-14px 0 20px}
+.envs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 10px}
+.env{appearance:none;-webkit-appearance:none;border:0;background:none;padding:4px 0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;-webkit-tap-highlight-color:transparent;transform:rotate(var(--r,0deg));transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.env:active{transform:rotate(var(--r,0deg)) scale(.92)}
+.env svg{width:84px;height:68px;filter:drop-shadow(0 2px 0 var(--lift)) drop-shadow(0 8px 10px var(--lift))}
+.env .n{font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:16px;color:var(--ink-soft)}
+.env .open{display:none}
+.env.opened .open{display:inline}
+.env.opened .closed{display:none}
+
+.modal{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--scrim);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.modal.show{opacity:1;visibility:visible}
+.mnote{position:relative;width:min(340px,100%);background:var(--paper);color:var(--ink);border-radius:8px;padding:34px 22px 22px;text-align:center;box-shadow:0 24px 50px -10px rgba(0,0,0,.45);transform:scale(.88) rotate(-3deg);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.modal.show .mnote{transform:rotate(-1deg)}
+.mnote .em{font-size:50px;line-height:1.1}
+.mnote .k{margin-top:10px;font-size:14px;font-weight:600;color:var(--berry-ink)}
+.mnote .mt{margin:8px 0 22px;font-size:21px;line-height:1.4;font-weight:500}
+.btn{appearance:none;-webkit-appearance:none;border:0;background:var(--btn);color:var(--on-btn);font-weight:700;font-size:16px;padding:12px 28px;border-radius:999px;cursor:pointer;box-shadow:0 3px 0 rgba(61,44,62,.28);-webkit-tap-highlight-color:transparent}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(61,44,62,.28)}
+
+/* carta */
+.letter-wrap{position:relative;margin-top:16px}
+.letter-wrap>.tape{left:16px;margin-left:0;top:-10px;transform:rotate(-8deg);z-index:2}
+.letter{
+  position:relative;
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(90deg,transparent 28px,rgba(233,86,143,.38) 28px 30px,transparent 30px),
+    repeating-linear-gradient(180deg,transparent 0 31px,var(--paper-line) 31px 32px);
+  background-attachment:local;
+  border-radius:6px;
+  padding:40px 18px 32px 42px;
+  font-size:18px;line-height:32px;
+  box-shadow:0 1px 0 var(--lift),0 18px 30px -18px var(--shadow);
+}
+.letter p{margin:0 0 32px}
+.letter p:last-child{margin-bottom:0}
+.letter .hi{font-weight:700}
+.letter .sign{text-align:right}
+.stamp{position:absolute;top:-16px;right:10px;z-index:2;width:64px;height:76px;padding:5px;background:#fff;transform:rotate(7deg);border-radius:3px;box-shadow:0 8px 14px -6px rgba(61,44,62,.45)}
+.stamp::before{content:"";position:absolute;inset:3px;border:2px dashed #f0a9c8;border-radius:2px;pointer-events:none}
+.stamp .in{width:100%;height:100%;background:linear-gradient(160deg,#ffd6e7,#d3e7ff);display:flex;align-items:center;justify-content:center}
+.stamp svg{width:46px;height:46px}
+.harbor{margin:34px auto 0;text-align:center}
+.harbor-pic{width:min(270px,82%);margin:0 auto;padding:5px;background:#fff;border-radius:32px;transform:rotate(2deg);box-shadow:0 2px 0 var(--lift),0 16px 26px -14px var(--shadow)}
+.harbor-pic svg{display:block;width:100%;height:auto}
+.harbor figcaption{margin-top:16px;font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:22px;color:var(--berry)}
+
+/* carta dela */
+.her-hint{text-align:center;font-size:15px;color:var(--ink-soft);margin:0 10px 24px}
+.her-wrap{position:relative;margin-bottom:48px}
+.her-wrap>.tape{z-index:2}
+.her{position:relative;background:var(--her-paper);border-radius:6px;padding:30px 20px 24px;font-size:16.5px;line-height:1.6;transform:rotate(-.8deg);box-shadow:0 1px 0 var(--lift),0 18px 30px -18px var(--shadow)}
+.her p{margin:0 0 14px}
+.her p:last-child{margin-bottom:0}
+.her .her-tag{font-size:14px;font-weight:600;color:var(--berry-ink);margin-bottom:12px}
+.hl{cursor:pointer;border-radius:3px;padding:0 2px;background-image:linear-gradient(transparent 50%,var(--hl) 50%,var(--hl) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-tap-highlight-color:transparent}
+.hl::after{content:" 💬";font-size:.85em}
+.hl:hover{background-image:linear-gradient(transparent 25%,var(--hl) 25%,var(--hl) 96%,transparent 96%)}
+.mine-title{text-align:center;font-size:26px;color:var(--ink);margin:0 0 30px}
+.home-note .sig{margin-top:6px;text-align:right;font-weight:700;color:var(--berry-ink)}
+
+/* o que a gente combina */
+.combo{margin-top:38px}
+.combo-head{text-align:center;margin-bottom:18px}
+.combo-head h2{font-size:28px;color:var(--ink)}
+.combo-head p{font-size:14px;color:var(--ink-soft);margin-top:6px}
+.combos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 10px;padding:0 4px}
+.chipbtn{appearance:none;-webkit-appearance:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;display:inline-flex;align-items:center;gap:7px;padding:9px 15px 9px 12px;border-radius:999px;background:var(--cc);color:var(--obj-ink);font-weight:600;font-size:15px;line-height:1.2;box-shadow:0 0 0 3px #fff,0 4px 0 3px rgba(61,44,62,.10),0 12px 18px -10px var(--shadow);transform:rotate(var(--r,0deg));transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.chipbtn:active{transform:rotate(var(--r,0deg)) scale(.93)}
+.chipbtn .ce{font-size:19px;line-height:1}
+
+/* texto dele */
+.him-wrap{position:relative;margin-bottom:48px}
+.him-wrap>.tape{z-index:2}
+.him{position:relative;background:var(--him-paper);border-radius:6px;padding:30px 20px 24px;font-size:16.5px;line-height:1.6;transform:rotate(.8deg);box-shadow:0 1px 0 var(--lift),0 18px 30px -18px var(--shadow)}
+.him p{margin:0 0 14px}
+.him p:last-child{margin-bottom:0}
+.him .him-tag{font-size:14px;font-weight:600;color:var(--berry-ink);margin-bottom:12px}
+
+/* nossa trilha */
+.trilha{margin-top:38px}
+.tapebtn{display:block;margin:0 auto;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent;width:min(290px,84vw);transform:rotate(-2deg);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.tapebtn:active{transform:rotate(-2deg) scale(.96)}
+.tapebtn svg{display:block;width:100%;height:auto;filter:drop-shadow(0 2px 0 var(--lift)) drop-shadow(0 12px 14px var(--lift))}
+.reel{transform-box:fill-box;transform-origin:center}
+.tapebtn.playing .reel{animation:spin 1.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.tapebtn.playing .reel{animation:none!important}}
+.now{text-align:center;margin:16px 8px 0;font-weight:600;color:var(--berry-ink)}
+.jcard{margin-top:26px}
+.side{font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:15px;color:var(--berry-ink);margin-bottom:8px}
+.tracks{margin:0 0 16px;padding-left:24px}
+.tracks:last-child{margin-bottom:0}
+.tracks li{margin-bottom:10px;padding-left:2px}
+.tracks li::marker{font-weight:700;color:var(--ink-soft)}
+.tracks b{font-weight:700}
+.tracks em{font-style:normal;color:var(--ink-soft)}
+.tracks span{display:block;font-size:14.5px;line-height:1.4;color:var(--ink-soft)}
+
+/* tema: preto ou rosa */
+.tema-try{margin-top:10px;font-size:14px;font-weight:600;color:var(--berry-ink)}
+.tema-btns{display:inline-flex;flex-wrap:wrap;gap:4px;margin-top:6px;padding:4px;border-radius:999px;background:var(--bg);box-shadow:inset 0 0 0 2px var(--paper-line)}
+.tema-b{appearance:none;-webkit-appearance:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;background:transparent;color:var(--ink);font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;white-space:nowrap}
+.tema-b[data-tema="preto"][aria-pressed="true"]{background:#151217;color:#ffffff}
+.tema-b[data-tema="rosa"][aria-pressed="true"]{background:#ff9cc2;color:#3d2c3e}
+
+/* matemática fofa */
+.math-note{text-align:center;margin:30px 12px 0;font-size:16px}
+.lim{display:block;font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:22px;color:var(--berry);margin-bottom:8px}
+.lim sub{font-size:.55em}
+.math-note small{display:block;margin-top:6px;font-size:14px;color:var(--ink-soft)}
+
+/* cartas em envelopes */
+.mail{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 30px}
+.mailbtn{appearance:none;-webkit-appearance:none;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 2px;color:var(--ink);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.mailbtn:nth-child(1){transform:rotate(-3deg)}
+.mailbtn:nth-child(2){transform:rotate(2deg)}
+.mailbtn:nth-child(3){transform:rotate(-1deg)}
+.mailbtn[aria-expanded="true"]{transform:translateY(-4px)}
+.mailbtn svg{width:96px;height:77px;filter:drop-shadow(0 2px 0 var(--lift)) drop-shadow(0 8px 10px var(--lift))}
+.mailbtn .paper{fill:#ffffff;stroke:#e9a9c4}
+.mailbtn .flap{fill:var(--ec);stroke:#e9a9c4}
+.mailbtn .open{display:none}
+.mailbtn[aria-expanded="true"] .open{display:inline}
+.mailbtn[aria-expanded="true"] .closed{display:none}
+.mailbtn b{font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:16px;line-height:1.1}
+.mailbtn span{font-size:12px;line-height:1.25;color:var(--ink-soft);text-align:center}
+.lt{scroll-margin-top:28px}
+.lt:not([hidden]){animation:fade .35s ease both}
+.lt .her-wrap,.lt .him-wrap{margin-bottom:0}
+.close-row{text-align:center;margin:28px 0 0}
+.btn-soft{appearance:none;-webkit-appearance:none;border:2px dashed var(--paper-line);background:transparent;color:var(--ink-soft);font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+
+/* tema azul + linha de cores */
+.tema-row{text-align:center;padding:6px 0 18px}
+.tema-row + .item{border-top:2px dashed var(--paper-line)}
+.tema-note{margin:10px 6px 0;font-size:14px;color:var(--ink-soft)}
+.tema-b[data-tema="azul"][aria-pressed="true"]{background:#3f86de;color:#ffffff}
+
+/* torcida pro ENEM */
+.enem{position:relative;margin:4px 0 22px;padding:24px 18px 16px;background:var(--paper);border-radius:6px;text-align:center;font-weight:600;transform:rotate(-1deg);box-shadow:0 1px 0 var(--lift),0 14px 24px -16px var(--shadow)}
+
+/* terceira polaroid */
+.polas{flex-wrap:wrap}
+.polas .pola{flex:0 0 calc(50% - 7px);max-width:150px}
+.pola:nth-child(3){transform:rotate(-2deg);margin-top:4px}
+
+/* abinhas de caderno */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--nav);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:2px solid var(--line);padding:10px 8px calc(8px + env(safe-area-inset-bottom,0px))}
+.nav .in{max-width:480px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.tab{appearance:none;-webkit-appearance:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;background:transparent;color:var(--ink-soft);box-shadow:inset 0 0 0 2px var(--tc);border-radius:14px 14px 8px 8px;padding:7px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;transition:transform .2s cubic-bezier(.3,1.6,.5,1),background-color .2s}
+.tab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tab[aria-selected="true"]{background:var(--tc);color:var(--obj-ink);font-weight:700;transform:translateY(-3px);box-shadow:0 4px 0 rgba(61,44,62,.18)}
+.c-pink{--tc:var(--pink)}
+.c-lilac{--tc:var(--lilac)}
+.c-vanilla{--tc:var(--vanilla)}
+.c-sky{--tc:var(--sky)}
+.c-mint{--tc:var(--mint)}
+
+/* aba Anotado */
+.notebook{position:relative;background-color:var(--paper);background-image:linear-gradient(90deg,transparent 26px,rgba(233,86,143,.30) 26px 28px,transparent 28px);border-radius:6px;padding:30px 18px 22px 40px;box-shadow:0 1px 0 var(--lift),0 18px 30px -18px var(--shadow)}
+.nb-h{font-size:20px;color:var(--berry-ink);margin:8px 0}
+.check{list-style:none;margin:0 0 14px;padding:0}
+.check:last-child{margin-bottom:0}
+.check li{position:relative;padding:8px 0 8px 32px;border-bottom:1px dashed var(--paper-line);font-size:16px;line-height:1.45}
+.check li:last-child{border-bottom:0}
+.check li::before{content:"";position:absolute;left:0;top:10px;width:22px;height:22px;border-radius:7px;background:var(--berry) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 12.5l4 4L18.5 7.5'/%3E%3C/svg%3E") center/14px 14px no-repeat}
+
+/* 6 abinhas */
+.nav .in{grid-template-columns:repeat(6,1fr);gap:4px}
+.tab{font-size:11px;padding:7px 0 6px;min-width:0}
+.tab svg{width:21px;height:21px}
+.c-peach{--tc:#ffdcc8}
+
+/* abertura */
+.splash{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) 28px calc(24px + env(safe-area-inset-bottom,0px));background-color:var(--bg);background-image:radial-gradient(var(--dot) 1.3px,transparent 1.6px);background-size:22px 22px;text-align:center;transition:opacity .5s ease,transform .5s ease,visibility .5s}
+.splash.gone{opacity:0;transform:translateY(-24px);visibility:hidden}
+.splash-in>*{animation:pop .6s cubic-bezier(.3,1.5,.5,1) both}
+.splash-in>*:nth-child(2){animation-delay:.12s}
+.splash-in>*:nth-child(3){animation-delay:.24s}
+.splash-in>*:nth-child(4){animation-delay:.36s}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.9)}to{opacity:1;transform:none}}
+.splash .avatar{width:150px;height:150px;border-width:7px;margin-bottom:22px}
+.splash .avatar svg{width:118px;height:118px}
+.splash h1{font-size:48px}
+.splash p{margin:18px 0 24px;font-size:18px;color:var(--ink-soft)}
+
+.burst{position:fixed;z-index:70;pointer-events:none;width:20px;height:20px;animation:burst 1.1s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes burst{0%{opacity:1;transform:translate(-50%,-50%) scale(.5)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.15)}}
+
+@media (max-width:350px){
+  .hero h1{font-size:50px}
+  .units b{font-size:20px}
+  .tab{font-size:11px}
+  .item .stk{width:70px;height:70px}
+  .letter{font-size:17px;padding-left:38px}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 20.5C12 20.5 3 14.9 3 8.9 3 6.1 5.1 4 7.7 4c1.8 0 3.3 1 4.3 2.6C13 5 14.5 4 16.3 4 18.9 4 21 6.1 21 8.9c0 6-9 11.6-9 11.6z"/></symbol>
+    <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 1.5c.9 6.1 4.4 9.6 10.5 10.5-6.1.9-9.6 4.4-10.5 10.5-.9-6.1-4.4-9.6-10.5-10.5C7.6 11.1 11.1 7.6 12 1.5z"/></symbol>
+    <symbol id="antHead" viewBox="0 0 100 100">
+      <path d="M40 30 Q33 14 22 10" fill="none" stroke="#3d2c3e" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M60 30 Q67 14 78 10" fill="none" stroke="#3d2c3e" stroke-width="4.5" stroke-linecap="round"/>
+      <use href="#heart" x="13" y="1" width="18" height="18" fill="#ff6fa8"/>
+      <use href="#heart" x="69" y="1" width="18" height="18" fill="#ff6fa8"/>
+      <circle cx="50" cy="58" r="34" fill="#3d2c3e"/>
+      <ellipse cx="36" cy="37" rx="11" ry="6" fill="#ffffff" opacity=".14" transform="rotate(-30 36 37)"/>
+      <ellipse cx="37" cy="56" rx="9.5" ry="11" fill="#ffffff"/>
+      <ellipse cx="63" cy="56" rx="9.5" ry="11" fill="#ffffff"/>
+      <circle cx="38" cy="58" r="7.5" fill="#2a1a2c"/>
+      <circle cx="62" cy="58" r="7.5" fill="#2a1a2c"/>
+      <circle cx="40.6" cy="54.6" r="2.8" fill="#ffffff"/>
+      <circle cx="64.6" cy="54.6" r="2.8" fill="#ffffff"/>
+      <circle cx="35.8" cy="61" r="1.3" fill="#ffffff"/>
+      <circle cx="59.8" cy="61" r="1.3" fill="#ffffff"/>
+      <ellipse cx="27.5" cy="71" rx="6.5" ry="3.8" fill="#ff8fbf" opacity=".9"/>
+      <ellipse cx="72.5" cy="71" rx="6.5" ry="3.8" fill="#ff8fbf" opacity=".9"/>
+      <path d="M45 72 Q50 77 55 72" fill="none" stroke="#ffc6dc" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="splash" id="splash">
+  <div class="splash-in">
+    <div class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#antHead" width="100" height="100"/></svg></div>
+    <div><h1 class="sticker-word">Oi, Eevee</h1></div>
+    <p>Eu fiz uma coisinha pra você.</p>
+    <div><button class="btn" id="openBtn" type="button">Abrir 💌</button></div>
+  </div>
+</div>
+
+<main class="app">
+
+  <!-- INÍCIO -->
+  <section class="panel on" id="inicio" role="tabpanel" aria-label="Início">
+    <div class="enem" id="enem" hidden><span class="tape tape-sky"></span><p id="enemText"></p></div>
+    <header class="hero">
+      <h1 class="sticker-word">Evellyn</h1>
+      <p class="hand">Pra mim, você é a minha Eevee e a minha formiguinha.</p>
+      <button class="mascot-btn" id="mascot" type="button" aria-label="Formiguinha segurando um sorvete. Toca nela!">
+        <svg viewBox="0 0 240 240" aria-hidden="true">
+          <defs>
+            <linearGradient id="gHero" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffd9ea"/>
+              <stop offset="1" stop-color="#d6e9ff"/>
+            </linearGradient>
+            <clipPath id="cpConeHero"><path d="M49 132 L75 132 L62 170 Z"/></clipPath>
+          </defs>
+          <circle cx="120" cy="120" r="108" fill="url(#gHero)" stroke="#ffffff" stroke-width="6"/>
+          <ellipse cx="128" cy="183" rx="58" ry="6" fill="#4a3046" opacity=".13"/>
+          <ellipse cx="158" cy="156" rx="34" ry="26" fill="#3d2c3e"/>
+          <ellipse cx="150" cy="144" rx="12" ry="5.5" fill="#ffffff" opacity=".13" transform="rotate(-18 150 144)"/>
+          <g stroke="#3d2c3e" stroke-width="6" stroke-linecap="round" fill="none">
+            <path d="M110 148 L101 176"/>
+            <path d="M121 152 L121 180"/>
+            <path d="M132 148 L141 176"/>
+          </g>
+          <ellipse cx="121" cy="138" rx="21" ry="18" fill="#3d2c3e"/>
+          <path d="M49 132 L75 132 L62 170 Z" fill="#f4bf6e"/>
+          <g clip-path="url(#cpConeHero)" stroke="#dd9a45" stroke-width="1.6">
+            <path d="M40 124 L84 154 M40 136 L84 166 M40 112 L84 142 M84 124 L40 154 M84 136 L40 166 M84 112 L40 142"/>
+          </g>
+          <circle cx="62" cy="122" r="15" fill="#ffb3cf"/>
+          <circle cx="52.5" cy="133" r="5" fill="#ffb3cf"/>
+          <circle cx="70.5" cy="134" r="4.5" fill="#ffb3cf"/>
+          <circle cx="62" cy="101" r="12.5" fill="#fff1d6"/>
+          <rect x="55" y="99" width="6" height="2.4" rx="1.2" fill="#ff7fb0" transform="rotate(-30 58 100.2)"/>
+          <rect x="64" y="103" width="6" height="2.4" rx="1.2" fill="#8ec5ff" transform="rotate(25 67 104.2)"/>
+          <rect x="59" y="106.5" width="6" height="2.4" rx="1.2" fill="#ffcc4d" transform="rotate(-10 62 107.7)"/>
+          <use href="#heart" x="54" y="79" width="16" height="16" fill="#ff6fa8"/>
+          <path d="M104 140 Q90 148 77 139" stroke="#3d2c3e" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="75.5" cy="138" r="5.5" fill="#3d2c3e"/>
+          <use href="#antHead" x="64" y="18" width="112" height="112"/>
+          <use href="#heart" x="180" y="50" width="22" height="22" fill="#ff8fbf"/>
+          <use href="#heart" x="198" y="88" width="13" height="13" fill="#ffb3cf"/>
+          <use href="#sparkle" x="30" y="54" width="18" height="18" fill="#f6c453"/>
+          <use href="#sparkle" x="190" y="140" width="18" height="18" fill="#8ec5ff"/>
+          <use href="#heart" x="30" y="158" width="12" height="12" fill="#ff8fbf"/>
+        </svg>
+      </button>
+      <p class="hint">toca na formiguinha</p>
+    </header>
+
+    <div class="tickets">
+      <div class="ticket t-vanilla" data-since="2026-09-19">
+        <div class="stub"><b>19</b><span>set</span></div>
+        <div class="tbody">
+          <p class="tt">Desde que eu vi esses olhos pela primeira vez</p>
+          <div class="units">
+            <div><b data-u="d">0</b><span>dias</span></div>
+            <div><b data-u="h">00</b><span>horas</span></div>
+            <div><b data-u="m">00</b><span>min</span></div>
+            <div><b data-u="s">00</b><span>seg</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ticket t-pink" data-since="2026-10-11">
+        <div class="stub"><b>11</b><span>out</span></div>
+        <div class="tbody">
+          <p class="tt">Desde o nosso primeiro beijo</p>
+          <div class="units">
+            <div><b data-u="d">0</b><span>dias</span></div>
+            <div><b data-u="h">00</b><span>horas</span></div>
+            <div><b data-u="m">00</b><span>min</span></div>
+            <div><b data-u="s">00</b><span>seg</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ticket t-lilac" id="bday">
+        <div class="stub"><b>23</b><span>set</span></div>
+        <div class="tbody">
+          <p class="tt">Até o seu aniversário</p>
+          <div class="units" id="bdayUnits">
+            <div><b data-b="d">0</b><span>dias</span></div>
+            <div><b data-b="h">00</b><span>horas</span></div>
+            <div><b data-b="m">00</b><span>min</span></div>
+            <div><b data-b="s">00</b><span>seg</span></div>
+          </div>
+          <p class="today" id="bdayToday" hidden>Hoje é o seu dia! Feliz aniversário 🎂</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="trilha" aria-label="Nossa trilha">
+      <div class="combo-head">
+        <h2>Nossa trilha</h2>
+        <p>Toca na fitinha.</p>
+      </div>
+      <button class="tapebtn" id="fita" type="button" aria-pressed="false" aria-label="Fitinha da nossa trilha. Toca pra dar play.">
+        <svg viewBox="0 0 260 164" aria-hidden="true"><rect x="5" y="5" width="250" height="154" rx="18" fill="#ffffff"/><rect x="10" y="10" width="240" height="144" rx="14" fill="#3d2c3e"/><rect x="24" y="22" width="212" height="88" rx="10" fill="#ffd6e6"/><path d="M24 32 a10 10 0 0 1 10 -10 h192 a10 10 0 0 1 10 10 v8 h-212 z" fill="#ffb3cf"/><text x="130" y="36" text-anchor="middle" font-family="Sniglet, 'Arial Rounded MT Bold', system-ui, sans-serif" font-weight="800" font-size="13" fill="#3d2c3e">nossa trilha</text><rect x="62" y="50" width="136" height="46" rx="23" fill="#2a1f2b"/><rect x="104" y="60" width="52" height="26" rx="3" fill="#4e3b54"/><g class="reel"><circle cx="92" cy="73" r="16" fill="#ffffff"/><path d="M92 62 V68 M101.5 78.5 L96.3 75.5 M82.5 78.5 L87.7 75.5" stroke="#c9b6cf" stroke-width="3" stroke-linecap="round"/><circle cx="92" cy="73" r="4.5" fill="#3d2c3e"/></g><g class="reel"><circle cx="168" cy="73" r="16" fill="#ffffff"/><path d="M168 62 V68 M177.5 78.5 L172.3 75.5 M158.5 78.5 L163.7 75.5" stroke="#c9b6cf" stroke-width="3" stroke-linecap="round"/><circle cx="168" cy="73" r="4.5" fill="#3d2c3e"/></g><use href="#heart" x="34" y="58" width="18" height="18" fill="#ff6fa8"/><use href="#sparkle" x="208" y="56" width="18" height="18" fill="#f6c453"/><path d="M62 154 L74 122 H186 L198 154 Z" fill="#2e2230"/><circle cx="98" cy="140" r="5" fill="#1d151e"/><circle cx="162" cy="140" r="5" fill="#1d151e"/><circle cx="17" cy="17" r="3" fill="#5a4560"/><circle cx="243" cy="17" r="3" fill="#5a4560"/><circle cx="17" cy="147" r="3" fill="#5a4560"/><circle cx="243" cy="147" r="3" fill="#5a4560"/></svg>
+      </button>
+      <p class="now" id="nowPlaying" hidden>♪ Tocando na minha cabeça: <b>Perfect</b>, do One Direction</p>
+      <div class="note jcard tilt-r">
+        <span class="tape tape-pink"></span>
+        <p class="side">Lado A</p>
+        <ol class="tracks">
+          <li><b>Perfect</b> <em>One Direction</em><span>A música que fica na minha cabeça quando eu penso em você.</span></li>
+          <li><b>Ghost Mountain</b><span>O seu artista favorito, que você me apresentou.</span></li>
+          <li><b>Radiohead</b><span>Você me apresentou também, e eu achei muito legal.</span></li>
+        </ol>
+        <p class="side">Lado B</p>
+        <ol class="tracks" start="4">
+          <li><b>OSTs de jogos</b><span>A nossa playlist, que nasceu do Life is Strange.</span></li>
+          <li><b>Eletrônica</b><span>Pros muitos shows que eu quero te levar, e pra todas as houses que a gente ainda vai conhecer pelo mundo.</span></li>
+          <li><b>K-pop</b><span>O seu amor por grupos coreanos. E o meu segredinho.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="combo" aria-label="O que a gente combina">
+      <div class="combo-head">
+        <h2>O que a gente combina</h2>
+        <p>Toca nos adesivos.</p>
+      </div>
+      <div class="combos" id="combos"></div>
+    </section>
+
+    <div class="note tilt-l home-note">
+      <span class="tape tape-sky"></span>
+      <p>Eu fiz esse cantinho pra guardar o que eu sinto por você, e pra você saber que eu presto atenção em tudo o que você fala. Tudo o que você fala é válido pra mim. As abinhas aqui embaixo levam pro resto 💙</p>
+      <p class="sig">João</p>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section class="panel" id="historia" role="tabpanel" aria-label="Nossa história">
+    <header class="page-head">
+      <h2>Nossa história</h2>
+      <p>Até agora. O melhor ainda tá por vir.</p>
+    </header>
+
+    <ol class="tl">
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-r">
+          <span class="tape tape-lilac"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><linearGradient id="gIcon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd6e7"/><stop offset="1" stop-color="#cfe4ff"/></linearGradient></defs>
+            <circle cx="60" cy="60" r="55" fill="#e9f2ff" stroke="#ffffff" stroke-width="6"/>
+            <rect x="28" y="22" width="64" height="64" rx="14" fill="#f2b84b"/>
+            <rect x="33" y="27" width="54" height="54" rx="10" fill="url(#gIcon)"/>
+            <path d="M60 14 l6 7 -6 7 -6 -7 z" fill="#ffe08a" stroke="#e0a43a" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="60" cy="54" r="16" fill="#ffe08a"/>
+            <path d="M50.5 51.5 q3.5 -3.5 7 0" fill="none" stroke="#4a3046" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="66.5" cy="50.5" r="2.4" fill="#4a3046"/>
+            <path d="M52 58 Q60 65 68 58" fill="none" stroke="#4a3046" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M61 61.8 q1 6 5.5 4.3 q1.2 -3 -1.2 -5.3 z" fill="#ff7fb0"/>
+            <rect x="30" y="80" width="60" height="16" rx="8" fill="#ff8fbf"/>
+            <text x="60" y="92" text-anchor="middle" font-family="Sniglet, 'Arial Rounded MT Bold', system-ui, sans-serif" font-size="10" font-weight="800" fill="#ffffff">exclusivo</text>
+            <use href="#sparkle" x="88" y="16" width="15" height="15" fill="#f6c453"/>
+          </svg>
+          <p class="when">Muito antes</p>
+          <h3>Tudo começou no LoL</h3>
+          <p class="txt">A gente se conheceu virtualmente, muito tempo atrás, jogando League of Legends. Eu tinha um ícone exclusivo da Caitlyn que você queria muito e não conseguiu pegar… e eu ficava te provocando por causa disso. kkkkk</p>
+        </article>
+      </li>
+
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-l">
+          <span class="tape tape-vanilla"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="55" fill="#fff4d4" stroke="#ffffff" stroke-width="6"/>
+            <use href="#sparkle" x="27" y="25" width="66" height="66" fill="#ffcc4d"/>
+            <circle cx="54.5" cy="57" r="2.4" fill="#4a3046"/>
+            <circle cx="65.5" cy="57" r="2.4" fill="#4a3046"/>
+            <path d="M57 61.5 Q60 64 63 61.5" fill="none" stroke="#4a3046" stroke-width="1.9" stroke-linecap="round"/>
+            <use href="#sparkle" x="17" y="20" width="20" height="20" fill="#ff8fbf"/>
+            <use href="#sparkle" x="82" y="78" width="20" height="20" fill="#8ec5ff"/>
+            <use href="#sparkle" x="86" y="24" width="12" height="12" fill="#c9a8ff"/>
+            <use href="#heart" x="22" y="80" width="14" height="14" fill="#ff8fbf"/>
+          </svg>
+          <p class="when">19 de setembro</p>
+          <h3>A primeira vez que eu te vi</h3>
+          <p class="txt">Desde o primeiro momento eu fiquei reparando nesses olhos… e nesse cabelo preto lindo.</p>
+        </article>
+      </li>
+
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-r">
+          <span class="tape tape-pink"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><clipPath id="cpBucket"><path d="M32 58 L76 58 L70 102 L38 102 Z"/></clipPath></defs>
+            <circle cx="60" cy="60" r="55" fill="#ffeef0" stroke="#ffffff" stroke-width="6"/>
+            <g transform="rotate(16 87 76)">
+              <rect x="68" y="64" width="38" height="24" rx="4" fill="#ffd56b"/>
+              <circle cx="68" cy="76" r="4" fill="#ffeef0"/>
+              <circle cx="106" cy="76" r="4" fill="#ffeef0"/>
+              <line x1="79" y1="67" x2="79" y2="85" stroke="#e5ad3a" stroke-width="1.6" stroke-dasharray="2.5 2.5"/>
+              <use href="#heart" x="85" y="69" width="15" height="15" fill="#ff6fa8"/>
+            </g>
+            <g fill="#fff8e1" stroke="#efd28a" stroke-width="1.5">
+              <circle cx="38" cy="56" r="7"/>
+              <circle cx="70" cy="56" r="7"/>
+              <circle cx="42" cy="48" r="8"/>
+              <circle cx="52" cy="43" r="8.5"/>
+              <circle cx="63" cy="46" r="8"/>
+              <circle cx="48" cy="54" r="7"/>
+              <circle cx="59" cy="54" r="7"/>
+            </g>
+            <path d="M32 58 L76 58 L70 102 L38 102 Z" fill="#ffffff"/>
+            <g clip-path="url(#cpBucket)" fill="#ff9cc2">
+              <rect x="33" y="56" width="7" height="50"/>
+              <rect x="47" y="56" width="7" height="50"/>
+              <rect x="61" y="56" width="7" height="50"/>
+            </g>
+            <path d="M32 58 L76 58 L70 102 L38 102 Z" fill="none" stroke="#f2a6c4" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="54" cy="81" r="11" fill="#ffffff"/>
+            <circle cx="50.5" cy="80" r="1.9" fill="#4a3046"/>
+            <circle cx="57.5" cy="80" r="1.9" fill="#4a3046"/>
+            <path d="M51.5 84 Q54 86.5 56.5 84" fill="none" stroke="#4a3046" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+          <p class="when">11 de outubro</p>
+          <h3>O nosso primeiro beijo</h3>
+          <p class="txt">A gente foi passear no shopping e ver o filme “Minha Melhor Amiga”. E foi nesse dia que a gente deu o nosso primeiro beijo.</p>
+        </article>
+      </li>
+
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-l">
+          <span class="tape tape-mint"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="55" fill="#eeeaff" stroke="#ffffff" stroke-width="6"/>
+            <polygon points="60,24 91,42 91,78 60,96 29,78 29,42" fill="#b8a5f2" stroke="#7a64c9" stroke-width="3" stroke-linejoin="round"/>
+            <polygon points="60,38 81,74 39,74" fill="#d9cfff" stroke="#7a64c9" stroke-width="2.5" stroke-linejoin="round"/>
+            <g stroke="#7a64c9" stroke-width="2.5" stroke-linecap="round">
+              <line x1="60" y1="24" x2="60" y2="38"/>
+              <line x1="91" y1="42" x2="60" y2="38"/>
+              <line x1="91" y1="42" x2="81" y2="74"/>
+              <line x1="91" y1="78" x2="81" y2="74"/>
+              <line x1="60" y1="96" x2="81" y2="74"/>
+              <line x1="60" y1="96" x2="39" y2="74"/>
+              <line x1="29" y1="78" x2="39" y2="74"/>
+              <line x1="29" y1="42" x2="39" y2="74"/>
+              <line x1="29" y1="42" x2="60" y2="38"/>
+            </g>
+            <text x="60" y="68" text-anchor="middle" font-family="Sniglet, 'Arial Rounded MT Bold', system-ui, sans-serif" font-size="15" font-weight="800" fill="#4a3046">20</text>
+            <use href="#heart" x="84" y="86" width="15" height="15" fill="#ff8fbf"/>
+            <use href="#sparkle" x="18" y="20" width="14" height="14" fill="#f6c453"/>
+          </svg>
+          <p class="when">Numa dessas noites</p>
+          <h3>A noite na casa do Paulo</h3>
+          <p class="txt">A gente comeu um brownie daqueles “especiais” 👀 e foi pra casa do Paulo. Eu fiquei jogando RPG, você tava com a namorada do Buquitam e o Daniel… e eu confesso: não parei de pensar em você nem por um momento. Eu só queria ficar pertinho de você. Me fundir com você, sei lá.</p>
+        </article>
+      </li>
+
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-r">
+          <span class="tape tape-lilac"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#eef5ff" stroke="#ffffff" stroke-width="6"/><rect x="26" y="38" width="68" height="48" rx="8" fill="#ffffff" stroke="#9cc4f2" stroke-width="3"/><path d="M28 42 L60 66 L92 42" fill="#d7e8ff" stroke="#9cc4f2" stroke-width="3" stroke-linejoin="round"/><use href="#heart" x="50" y="54" width="20" height="20" fill="#ff6fa8"/><use href="#sparkle" x="84" y="22" width="15" height="15" fill="#f6c453"/><use href="#heart" x="20" y="84" width="13" height="13" fill="#8ec5ff"/></svg>
+          <p class="when">Um dia desses</p>
+          <h3>Quando você ficou receosa</h3>
+          <p class="txt">Você ficou receosa sobre o que eu realmente queria com você. Então eu te escrevi dizendo que quero muito que dê certo, e que vou fazer o possível pra ser o melhor pra nós dois. A carta inteira tá guardada na aba Cartas.</p>
+        </article>
+      </li>
+
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-l">
+          <span class="tape tape-pink"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#fff0f5" stroke="#ffffff" stroke-width="6"/><ellipse cx="60" cy="93" rx="40" ry="6" fill="#e9dff5"/><rect x="28" y="62" width="64" height="30" rx="7" fill="#fff6e8"/><path d="M28 67 q0 -5 5 -5 h54 q5 0 5 5 v4 q-4 6 -8 0 q-4 6 -8 0 q-4 6 -8 0 q-4 6 -8 0 q-4 6 -8 0 q-4 6 -8 0 q-4 6 -8 0 q-4 6 -8 0 z" fill="#ff9cc2"/><rect x="40" y="42" width="40" height="24" rx="6" fill="#ffb3cf"/><path d="M40 47 q0 -5 5 -5 h30 q5 0 5 5 v3 q-4 5 -8 0 q-4 5 -8 0 q-4 5 -8 0 q-4 5 -8 0 q-4 5 -8 0 z" fill="#fff6e8"/><rect x="57" y="27" width="6" height="16" rx="2" fill="#a9d0ff"/><path d="M57 32 l6 -3 M57 37 l6 -3" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/><path d="M60 14 q6.5 7 0 12.5 q-6.5 -5.5 0 -12.5 z" fill="#ffcc4d"/><path d="M60 19 q3 3.5 0 6 q-3 -2.5 0 -6 z" fill="#ff8f5a"/><circle cx="51" cy="80" r="2.2" fill="#4a3046"/><circle cx="69" cy="80" r="2.2" fill="#4a3046"/><path d="M57 83.5 Q60 86.5 63 83.5" fill="none" stroke="#4a3046" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="45.5" cy="84" rx="3.4" ry="2" fill="#ff8fbf" opacity=".6"/><ellipse cx="74.5" cy="84" rx="3.4" ry="2" fill="#ff8fbf" opacity=".6"/><circle cx="36" cy="78" r="1.6" fill="#8ec5ff"/><circle cx="84" cy="76" r="1.6" fill="#ffcc4d"/><circle cx="82" cy="87" r="1.6" fill="#c9a8ff"/><circle cx="38" cy="87" r="1.6" fill="#ff8fbf"/><use href="#heart" x="84" y="30" width="16" height="16" fill="#ff8fbf"/><use href="#sparkle" x="20" y="34" width="14" height="14" fill="#f6c453"/></svg>
+          <p class="when">27 de outubro</p>
+          <h3>O meu aniversário</h3>
+          <p class="txt">Você me mandou um texto de aniversário. Ele tá guardado aqui, na aba Cartas, com as minhas respostas nas partes marcadas.</p>
+        </article>
+      </li>
+
+      <li>
+        <span class="pin" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        <article class="note tilt-r">
+          <span class="tape tape-sky"></span>
+          <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><defs><radialGradient id="gBall" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#dfe6ff"/><stop offset="1" stop-color="#9eaad8"/></radialGradient><clipPath id="cpBall"><circle cx="60" cy="64" r="28"/></clipPath></defs><circle cx="60" cy="60" r="55" fill="#3a2f63" stroke="#ffffff" stroke-width="6"/><path d="M60 10 V36" stroke="#cbbdf0" stroke-width="2.5" stroke-linecap="round"/><circle cx="60" cy="64" r="28" fill="url(#gBall)"/><g clip-path="url(#cpBall)"><rect x="44" y="50" width="7" height="6" fill="#ffc2dc"/><rect x="66" y="62" width="7" height="6" fill="#bfe0ff"/><rect x="52" y="74" width="7" height="6" fill="#fff0b3"/><rect x="70" y="44" width="7" height="6" fill="#d9ccff"/><g fill="none" stroke="#8a97cc" stroke-width="1.2" opacity=".85"><path d="M30 43 H90 M30 50 H90 M30 57 H90 M30 64 H90 M30 71 H90 M30 78 H90 M30 85 H90 M60 30 V100"/><ellipse cx="60" cy="64" rx="9" ry="28"/><ellipse cx="60" cy="64" rx="18" ry="28"/><ellipse cx="60" cy="64" rx="25" ry="28"/></g></g><use href="#sparkle" x="43" y="45" width="13" height="13" fill="#ffffff"/><use href="#sparkle" x="18" y="32" width="16" height="16" fill="#ff8fbf"/><use href="#sparkle" x="86" y="24" width="13" height="13" fill="#ffcc4d"/><use href="#sparkle" x="88" y="80" width="15" height="15" fill="#8ec5ff"/><use href="#heart" x="22" y="80" width="14" height="14" fill="#ff8fbf"/></svg>
+          <p class="when">Próximo episódio</p>
+          <h3>Tudo o que a gente ainda vai viver</h3>
+          <p class="txt">A gente viveu pouca coisa por enquanto… mas eu quero viver muita coisa com você ainda. Você na PUC, fazendo psicologia, e a gente dividindo vários momentos juntos na faculdade. Muitos shows de eletrônica. E uma aventura por várias houses, em todos os lugares do mundo.</p>
+          <div class="polas">
+            <figure class="pola">
+              <span class="tape tape-pink"></span>
+              <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e58fb4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5h3.2L8.8 6h6.4l1.6 2.5H20V19H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg><span>em breve</span></div>
+              <figcaption class="cap">nossa primeira foto</figcaption>
+            </figure>
+            <figure class="pola">
+              <span class="tape tape-vanilla"></span>
+              <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e58fb4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5h3.2L8.8 6h6.4l1.6 2.5H20V19H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg><span>em breve</span></div>
+              <figcaption class="cap">a nossa primeira house</figcaption>
+            </figure>
+            <figure class="pola">
+              <span class="tape tape-sky"></span>
+              <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e58fb4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5h3.2L8.8 6h6.4l1.6 2.5H20V19H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg><span>em breve</span></div>
+              <figcaption class="cap">você caloura na PUC</figcaption>
+            </figure>
+          </div>
+        </article>
+      </li>
+    </ol>
+    <div class="trail-end" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#antHead" width="100" height="100"/></svg></div>
+  </section>
+
+  <!-- VOCÊ -->
+  <section class="panel" id="voce" role="tabpanel" aria-label="Você">
+    <header class="page-head">
+      <div class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#antHead" width="100" height="100"/></svg></div>
+      <h2>Você</h2>
+      <p>Pros outros, Evellyn. Pra mim, Eevee (do Pokémon!) e formiguinha.</p>
+    </header>
+
+    <div class="sheet">
+      <div class="item">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><clipPath id="cpCone2"><path d="M42 68 L78 68 L60 110 Z"/></clipPath></defs>
+          <circle cx="60" cy="60" r="55" fill="#ffe6f1" stroke="#ffffff" stroke-width="6"/>
+          <path d="M42 68 L78 68 L60 110 Z" fill="#f4bf6e"/>
+          <g clip-path="url(#cpCone2)" stroke="#dd9a45" stroke-width="1.8">
+            <path d="M30 62 L90 102 M30 76 L90 116 M30 48 L90 88 M90 62 L30 102 M90 76 L30 116 M90 48 L30 88"/>
+          </g>
+          <circle cx="60" cy="56" r="21" fill="#ffb3cf"/>
+          <circle cx="45" cy="69" r="6" fill="#ffb3cf"/>
+          <circle cx="58" cy="78" r="4.5" fill="#ffb3cf"/>
+          <circle cx="73" cy="70" r="5.5" fill="#ffb3cf"/>
+          <circle cx="60" cy="33" r="15" fill="#fff1d6"/>
+          <rect x="52" y="30" width="6" height="2.4" rx="1.2" fill="#ff7fb0" transform="rotate(-30 55 31.2)"/>
+          <rect x="63" y="34" width="6" height="2.4" rx="1.2" fill="#8ec5ff" transform="rotate(25 66 35.2)"/>
+          <rect x="57" y="39" width="6" height="2.4" rx="1.2" fill="#ffcc4d" transform="rotate(-8 60 40.2)"/>
+          <use href="#heart" x="51" y="9" width="18" height="18" fill="#ff6fa8"/>
+          <circle cx="53" cy="57" r="2.4" fill="#4a3046"/>
+          <circle cx="67" cy="57" r="2.4" fill="#4a3046"/>
+          <path d="M56.5 62 Q60 65 63.5 62" fill="none" stroke="#4a3046" stroke-width="1.9" stroke-linecap="round"/>
+          <ellipse cx="47.5" cy="62" rx="3.6" ry="2" fill="#ff7fb0" opacity=".55"/>
+          <ellipse cx="72.5" cy="62" rx="3.6" ry="2" fill="#ff7fb0" opacity=".55"/>
+        </svg>
+        <div>
+          <h3>Formiguinha</h3>
+          <p>Você adora um doce, principalmente sorvete. Mas sorvete de verdade, viu? Massa de sorvete tipo McDonald’s não conta.</p>
+        </div>
+      </div>
+
+      <div class="item flip">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="55" fill="#e4f0ff" stroke="#ffffff" stroke-width="6"/>
+          <path d="M29 70 V62 a31 31 0 0 1 62 0 V70" fill="none" stroke="#a48cf0" stroke-width="8" stroke-linecap="round"/>
+          <rect x="20" y="60" width="19" height="31" rx="9" fill="#ff8fbf"/>
+          <rect x="81" y="60" width="19" height="31" rx="9" fill="#ff8fbf"/>
+          <rect x="35" y="64" width="6" height="23" rx="3" fill="#ffd0e3"/>
+          <rect x="79" y="64" width="6" height="23" rx="3" fill="#ffd0e3"/>
+          <g fill="#4a3046">
+            <ellipse cx="51" cy="82" rx="6" ry="4.5" transform="rotate(-20 51 82)"/>
+            <ellipse cx="69" cy="77" rx="6" ry="4.5" transform="rotate(-20 69 77)"/>
+            <rect x="55.2" y="57" width="2.8" height="25" rx="1.4"/>
+            <rect x="73.2" y="52" width="2.8" height="25" rx="1.4"/>
+            <polygon points="55.2,57 76,51.5 76,57.5 55.2,63"/>
+          </g>
+          <use href="#sparkle" x="84" y="20" width="16" height="16" fill="#f6c453"/>
+          <use href="#heart" x="20" y="26" width="14" height="14" fill="#ff8fbf"/>
+        </svg>
+        <div>
+          <h3>Música</h3>
+          <p>Ghost Mountain é o seu artista favorito, e foi você que me apresentou, junto com o Radiohead. Achei muito legal! Você também curte eletrônica (eu nunca tinha achado uma mulher que gostasse!). Uma das coisas que eu mais gosto é poder fazer um monte de playlist com você.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="55" fill="#fff1dc" stroke="#ffffff" stroke-width="6"/>
+          <rect x="21" y="79" width="78" height="17" rx="4" fill="#8ec5ff"/>
+          <rect x="31" y="83" width="64" height="9" rx="2" fill="#ffffff"/>
+          <rect x="27" y="61" width="68" height="18" rx="4" fill="#ff9cc2"/>
+          <rect x="31" y="65" width="54" height="10" rx="2" fill="#ffffff"/>
+          <g transform="rotate(-7 60 52)">
+            <rect x="31" y="44" width="58" height="17" rx="4" fill="#b5e4c6"/>
+            <rect x="41" y="48" width="44" height="9" rx="2" fill="#ffffff"/>
+          </g>
+          <use href="#heart" x="58" y="18" width="20" height="20" fill="#ff6fa8"/>
+          <use href="#sparkle" x="30" y="22" width="15" height="15" fill="#f6c453"/>
+          <use href="#sparkle" x="88" y="34" width="10" height="10" fill="#a48cf0"/>
+        </svg>
+        <div>
+          <h3>Livros</h3>
+          <p>Você adora ler. E é uma mulher muito dedicada.</p>
+        </div>
+      </div>
+
+      <div class="item flip">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="55" fill="#f8eaff" stroke="#ffffff" stroke-width="6"/>
+          <g transform="rotate(-6 60 60)">
+            <rect x="25" y="19" width="70" height="82" rx="12" fill="#ffffff" stroke="#f3c6dc" stroke-width="2.5"/>
+            <use href="#heart" x="30" y="25" width="30" height="30" fill="#ff8fbf"/>
+            <path transform="translate(76 41)" d="M0 -11 L2.94 -4.05 L10.46 -3.4 L4.76 1.55 L6.47 8.9 L0 5 L-6.47 8.9 L-4.76 1.55 L-10.46 -3.4 L-2.94 -4.05 Z" fill="#ffd25e" stroke="#ffd25e" stroke-width="3" stroke-linejoin="round"/>
+            <g fill="#a9d0ff">
+              <circle cx="52" cy="77" r="6"/>
+              <circle cx="47.2" cy="83.7" r="6"/>
+              <circle cx="39.3" cy="81.1" r="6"/>
+              <circle cx="39.3" cy="72.9" r="6"/>
+              <circle cx="47.2" cy="70.3" r="6"/>
+            </g>
+            <circle cx="45" cy="77" r="4.5" fill="#ffd25e"/>
+            <use href="#sparkle" x="64" y="64" width="24" height="24" fill="#c9a8ff"/>
+          </g>
+        </svg>
+        <div>
+          <h3>Sua turminha</h3>
+          <p>Você gosta muito da Hello Kitty e da turma dela, principalmente do Cinnamoroll.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="55" fill="#ffeef5" stroke="#ffffff" stroke-width="6"/>
+          <path d="M46 66 V40 a14 14 0 0 1 28 0 V42" fill="none" stroke="#b3a1cf" stroke-width="7" stroke-linecap="round" transform="rotate(-12 46 60)"/>
+          <use href="#heart" x="27" y="42" width="66" height="66" fill="#ff8fbf"/>
+          <ellipse cx="44" cy="64" rx="6" ry="3.4" fill="#ffffff" opacity=".55" transform="rotate(-35 44 64)"/>
+          <circle cx="60" cy="73" r="5.5" fill="#4a3046"/>
+          <rect x="57.6" y="75" width="4.8" height="11" rx="2.4" fill="#4a3046"/>
+          <use href="#sparkle" x="82" y="22" width="16" height="16" fill="#f6c453"/>
+          <use href="#sparkle" x="22" y="30" width="11" height="11" fill="#a9d0ff"/>
+        </svg>
+        <div>
+          <h3>Seu jeitinho</h3>
+          <p>Você é bem introvertida, mas comigo você se abre. E eu sou muito grato por isso.</p>
+        </div>
+      </div>
+
+      <div class="item flip">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="55" fill="#fff4d4" stroke="#ffffff" stroke-width="6"/>
+          <use href="#sparkle" x="27" y="25" width="66" height="66" fill="#ffcc4d"/>
+          <circle cx="54.5" cy="57" r="2.4" fill="#4a3046"/>
+          <circle cx="65.5" cy="57" r="2.4" fill="#4a3046"/>
+          <path d="M57 61.5 Q60 64 63 61.5" fill="none" stroke="#4a3046" stroke-width="1.9" stroke-linecap="round"/>
+          <use href="#sparkle" x="17" y="20" width="20" height="20" fill="#ff8fbf"/>
+          <use href="#sparkle" x="82" y="78" width="20" height="20" fill="#8ec5ff"/>
+          <use href="#heart" x="22" y="80" width="14" height="14" fill="#ff8fbf"/>
+        </svg>
+        <div>
+          <h3>Esses olhos</h3>
+          <p>Eu me perco neles toda vez. E ainda tem esse cabelo preto lindo.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#f3eefa" stroke="#ffffff" stroke-width="6"/><path d="M18 30 H102" stroke="#b7a6cc" stroke-width="4" stroke-linecap="round"/><path d="M78 30 V46" stroke="#8e7aa8" stroke-width="2.5" stroke-linecap="round"/><path d="M73 46 Q78 51 83 46 L89 49 L96 57 L91 61 L89 58 L89 86 L67 86 L67 58 L65 61 L60 57 L67 49 Z" fill="#ffb3cf" stroke="#ffb3cf" stroke-width="2" stroke-linejoin="round"/><path d="M44 30 V44" stroke="#8e7aa8" stroke-width="2.5" stroke-linecap="round"/><path d="M39 44 Q44 49 49 44 L55 47 L62 55 L57 59 L55 56 L55 82 L33 82 L33 56 L31 59 L26 55 L33 47 Z" fill="#2e2433" stroke="#2e2433" stroke-width="2" stroke-linejoin="round"/><use href="#heart" x="40" y="58" width="9" height="9" fill="#ff8fbf"/><use href="#sparkle" x="92" y="64" width="14" height="14" fill="#ffcc4d"/><use href="#sparkle" x="78" y="90" width="10" height="10" fill="#ff8fbf"/></svg>
+        <div>
+          <h3>Seu estilo</h3>
+          <p>Quase sempre toda de preto, combinando com o meu. Mas eu queria que você experimentasse umas cores novas, tipo rosa. Você deve ficar adorável!</p>
+        </div>
+      </div>
+      <div class="tema-row">
+        <p class="tema-try">Experimenta as cores aqui no site:</p>
+        <div class="tema-btns" role="group" aria-label="Cor do site"><button class="tema-b" type="button" data-tema="azul" aria-pressed="false">💙 Azul</button><button class="tema-b" type="button" data-tema="preto" aria-pressed="false">🖤 Tudo preto</button><button class="tema-b" type="button" data-tema="rosa" aria-pressed="false">💗 Rosa</button></div>
+        <p class="tema-note">Azul porque é a sua cor favorita. Preto porque é o seu estilo. E rosa… porque eu ainda quero te ver de rosa 👀</p>
+      </div>
+
+      <div class="item flip">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#fdeaf3" stroke="#ffffff" stroke-width="6"/><path d="M60 40 L47 25 M60 40 L73 25" stroke="#8e7aa8" stroke-width="3" stroke-linecap="round"/><circle cx="47" cy="25" r="3.5" fill="#ff8fbf"/><circle cx="73" cy="25" r="3.5" fill="#ff8fbf"/><rect x="26" y="40" width="68" height="46" rx="12" fill="#a9d0ff"/><rect x="33" y="47" width="42" height="32" rx="7" fill="#fff6fa"/><use href="#heart" x="45" y="52" width="18" height="18" fill="#ff6fa8"/><circle cx="84" cy="55" r="4" fill="#ffffff"/><circle cx="84" cy="67" r="4" fill="#ffffff"/><rect x="36" y="86" width="8" height="8" rx="2" fill="#8e7aa8"/><rect x="76" y="86" width="8" height="8" rx="2" fill="#8e7aa8"/><use href="#sparkle" x="88" y="26" width="14" height="14" fill="#f6c453"/><use href="#sparkle" x="16" y="56" width="11" height="11" fill="#c9a8ff"/></svg>
+        <div>
+          <h3>Dorama</h3>
+          <p>Você ama dorama e grupos coreanos.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#eaf4ff" stroke="#ffffff" stroke-width="6"/><path d="M67 67 L87 87" stroke="#ff9cc2" stroke-width="11" stroke-linecap="round"/><circle cx="52" cy="52" r="21" fill="#ffffff" stroke="#a48cf0" stroke-width="7"/><circle cx="52" cy="52" r="17.5" fill="#dff0ff" opacity=".8"/><use href="#heart" x="42" y="42" width="20" height="20" fill="#ff6fa8"/><path d="M40 44 Q43 38 49 37" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><use href="#sparkle" x="80" y="22" width="15" height="15" fill="#f6c453"/><use href="#sparkle" x="22" y="80" width="12" height="12" fill="#ff8fbf"/></svg>
+        <div>
+          <h3>Tudo o que você sabe</h3>
+          <p>Você sabe de muita coisa que eu não sei. Isso me deixa muito curioso por você.</p>
+        </div>
+      </div>
+
+      <div class="item flip">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#fff4dc" stroke="#ffffff" stroke-width="6"/><g transform="rotate(-6 60 60)"><rect x="31" y="31" width="27" height="27" rx="8" fill="#ffd6e6"/><rect x="62" y="31" width="27" height="27" rx="8" fill="#cfe6ff"/><rect x="31" y="62" width="27" height="27" rx="8" fill="#cdf1de"/><rect x="62" y="62" width="27" height="27" rx="8" fill="#e3d8ff"/><g stroke="#4a3046" stroke-width="3.2" stroke-linecap="round"><path d="M44.5 37.5 V51.5 M37.5 44.5 H51.5"/><path d="M68.5 44.5 H82.5"/><path d="M39.5 70.5 L49.5 80.5 M49.5 70.5 L39.5 80.5"/></g><use href="#heart" x="66" y="66" width="19" height="19" fill="#ff6fa8"/></g><use href="#sparkle" x="86" y="16" width="14" height="14" fill="#f6c453"/><use href="#sparkle" x="16" y="84" width="11" height="11" fill="#a48cf0"/></svg>
+        <div>
+          <h3>Matemática</h3>
+          <p>Eu adoro te explicar matemática, mesmo você falando que não gosta muito. (Ainda vou fazer você gostar!!!)</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#f4ecff" stroke="#ffffff" stroke-width="6"/><rect x="22" y="34" width="66" height="48" rx="10" fill="#ffffff" stroke="#c9b6f0" stroke-width="3"/><path d="M49 47 L49 67 L66 57 Z" fill="#a48cf0" stroke="#a48cf0" stroke-width="3" stroke-linejoin="round"/><rect x="30" y="73" width="50" height="3.5" rx="1.75" fill="#e9e0fb"/><rect x="30" y="73" width="22" height="3.5" rx="1.75" fill="#ff8fbf"/><path d="M90 30 q9 5 6 14 M96 24 q12 8 8 21" fill="none" stroke="#ff8fbf" stroke-width="3" stroke-linecap="round"/><g fill="#4a3046"><ellipse cx="88" cy="94" rx="5" ry="3.8" transform="rotate(-20 88 94)"/><rect x="91.6" y="76" width="2.4" height="18" rx="1.2"/><path d="M94 76 q7 2.5 7.5 10 q-2.5 -4 -7.5 -5 z"/></g><use href="#sparkle" x="14" y="18" width="16" height="16" fill="#f6c453"/><use href="#heart" x="18" y="86" width="14" height="14" fill="#ff8fbf"/></svg>
+        <div>
+          <h3>Criativa</h3>
+          <p>Eu amo como você é criativa. Você tinha um canal no YouTube com coreografias de dança, e eu acho isso uma das coisas mais legais do mundo.</p>
+        </div>
+      </div>
+
+      <div class="item flip">
+        <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#e6f1ff" stroke="#ffffff" stroke-width="6"/><path d="M38 52 V66 Q60 78 82 66 V52 L60 61 Z" fill="#4e3b54"/><path d="M60 28 L98 44 L60 60 L22 44 Z" fill="#3d2c3e"/><path d="M60 44 L90 50 V66" fill="none" stroke="#ffcc4d" stroke-width="3" stroke-linecap="round"/><circle cx="90" cy="68" r="4" fill="#ffcc4d"/><circle cx="60" cy="88" r="15" fill="#ffffff" stroke="#8ec5ff" stroke-width="3"/><path d="M60 79 V98 M51 80 V85 Q51 92 60 92 Q69 92 69 85 V80 M55 98 H65" fill="none" stroke="#2f74cf" stroke-width="3" stroke-linecap="round"/><use href="#sparkle" x="16" y="20" width="15" height="15" fill="#f6c453"/><use href="#heart" x="88" y="84" width="14" height="14" fill="#ff8fbf"/></svg>
+        <div>
+          <h3>Futura psicóloga</h3>
+          <p>Você quer muito fazer psicologia na PUC-Rio, a minha faculdade. Eu realmente acredito que você vai passar depois do ENEM desse ano (8 e 15 de novembro!), e quero muito que a gente divida vários momentos juntos na faculdade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANOTADO -->
+  <section class="panel" id="anotado" role="tabpanel" aria-label="Anotado">
+    <header class="page-head">
+      <h2>Tá tudo anotado</h2>
+      <p>Eu presto atenção em tudo o que você fala. Tudo o que você fala é válido pra mim.</p>
+    </header>
+    <div class="notebook">
+      <span class="tape tape-sky"></span>
+      <h3 class="nb-h">Quem você é</h3>
+      <ul class="check">
+        <li>Evellyn pros outros. Pra mim, Eevee (do Pokémon) e formiguinha.</li>
+        <li>Faz aniversário no dia 23 de setembro.</li>
+        <li>A sua cor favorita é azul.</li>
+        <li>Se veste quase sempre de preto, combinando comigo (mas eu ainda quero te ver de rosa).</li>
+        <li>Tem uns olhos em que eu me perco toda vez e um cabelo preto lindo.</li>
+        <li>É bem introvertida, mas se abre comigo.</li>
+        <li>É uma mulher muito dedicada.</li>
+        <li>É muito criativa: tinha um canal no YouTube com coreografias de dança.</li>
+        <li>Sabe de muita coisa que eu não sei.</li>
+      </ul>
+      <h3 class="nb-h">O que você ama</h3>
+      <ul class="check">
+        <li>Música, muito! Principalmente Ghost Mountain, o seu artista favorito, que você me apresentou.</li>
+        <li>Radiohead, que você também me apresentou.</li>
+        <li>Música eletrônica.</li>
+        <li>Grupos coreanos e dorama.</li>
+        <li>Attack on Titan.</li>
+        <li>Life is Strange, o primeiro jogo em comum que a gente falou.</li>
+        <li>LoL, onde a gente se conheceu (e aquele ícone exclusivo da Caitlyn que você queria muito).</li>
+        <li>A Hello Kitty e a turma dela, principalmente o Cinnamoroll.</li>
+        <li>Ler livros.</li>
+        <li>Doce, principalmente sorvete de verdade.</li>
+      </ul>
+      <h3 class="nb-h">Os seus planos</h3>
+      <ul class="check">
+        <li>Fazer psicologia na PUC-Rio, a minha faculdade.</li>
+        <li>Fazer o ENEM nos dias 8 e 15 de novembro. Eu realmente acredito que você vai passar.</li>
+      </ul>
+      <h3 class="nb-h">O que você não curte muito</h3>
+      <ul class="check">
+        <li>Massa de sorvete tipo McDonald’s. Isso não é sorvete de verdade!</li>
+        <li>Matemática… por enquanto. (Ainda vou fazer você gostar!!!)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MOTIVOS -->
+  <section class="panel" id="motivos" role="tabpanel" aria-label="Motivos">
+    <header class="page-head">
+      <h2>Coisas que eu amo</h2>
+      <p>Em você e com você. Toca num envelope pra abrir.</p>
+    </header>
+    <p class="progress" id="prog" aria-live="polite"></p>
+    <div class="envs" id="envs"></div>
+    <p class="math-note"><span class="lim">lim<sub>n→∞</sub> motivos(n) = ∞</span>São 24 aqui… mas a lista de verdade não tem fim.<small>(Viu? Matemática também pode ser fofa.)</small></p>
+  </section>
+
+  <!-- CARTA -->
+  <section class="panel" id="carta" role="tabpanel" aria-label="Cartas">
+    <header class="page-head">
+      <h2>Cartas</h2>
+      <p>Toca num envelope pra abrir.</p>
+    </header>
+
+    <div class="mail" role="group" aria-label="Escolhe uma carta">
+      <button class="mailbtn" type="button" data-open="minha" aria-expanded="false" style="--ec:#bfdcff"><b>A minha</b><span>quando você ficou receosa</span></button>
+      <button class="mailbtn" type="button" data-open="sua" aria-expanded="false" style="--ec:#ffc4da"><b>A sua</b><span>do meu aniversário</span></button>
+      <button class="mailbtn" type="button" data-open="nova" aria-expanded="false" style="--ec:#ffe59a"><b>Cartinha</b><span>nova, só pra cá</span></button>
+    </div>
+
+    <div class="lt" id="lt-sua" hidden>
+    <p class="her-hint">Eu marquei umas partes do seu texto. Toca nelas pra ver o que eu respondo.</p>
+    <div class="her-wrap">
+      <span class="tape tape-lilac"></span>
+      <div class="her">
+        <p class="her-tag">Você me escreveu:</p>
+        <p>FELIZ ANIVERSÁRIO, JOÃO!!!! Espero que seu dia seja incrível e, apesar de todos os testes que você precisa fazer, ainda assim possa ser um dia feliz.</p>
+        <p>Queria te agradecer por ser um garoto tão especial. Faz tempo que não conheço alguém tão cheio de presença e que é capaz de animar o meu dia só por existir.</p>
+        <p>Também gostaria de te dizer que, apesar de fazer brincadeiras com seu love bombing, eu acredito em você. Não sei se estou fazendo o certo em confiar tanto em alguém que conheço há pouco tempo, mas quero seguir meu coração e me permitir ter bons momentos contigo, independentemente dos resultados.</p>
+        <p>Eu realmente tenho muita admiração por ti e sinto vontade de estar presente na sua vida o tempo inteiro. <span class="hl" role="button" tabindex="0" data-r="0">Prometo que posso ser interessante também.</span></p>
+        <p>Queria pedir para você ficar comigo, mesmo que só como amigos. <span class="hl" role="button" tabindex="0" data-r="1">Se você quiser mudar de ideia amanhã e decidir parar de ficar comigo, tudo bem,</span> mas fica por perto, porque eu gosto muito da sua companhia e tenho almejado sua atenção por quase todos os minutos do meu dia.</p>
+        <p>Não pare de ser o João nunca, continue preenchendo os lugares com a sua presença, animando os seus amigos, sendo um cara gentil e, principalmente, muito bonito kkkk.</p>
+        <p>Eu te amo muito, João!! E eu juro que não é love bombing. 💔 Desculpa por parecer larper da sua pessoa, <span class="hl" role="button" tabindex="0" data-r="2">só tenho o sentimento de te conhecer há muito tempo</span> e eu preciso expressar isso de alguma forma. <span class="hl" role="button" tabindex="0" data-r="3">Eu te amo e te quero por perto.</span> Feliz aniversário!</p>
+      </div>
+    </div>
+
+      <div class="close-row"><button class="btn-soft" type="button" data-close>Guardar no envelope 💌</button></div>
+    </div>
+
+    <div class="lt" id="lt-minha" hidden>
+    <div class="him-wrap">
+      <span class="tape tape-mint"></span>
+      <div class="him">
+        <p class="him-tag">Quando você ficou receosa sobre o que eu realmente queria com você, eu te escrevi:</p>
+        <p>Moça, inclusive aproveitando o momento em que tô mais suscetível a ser mais aberto, eu queria dizer que, apesar do que você ouviu de mim ou das coisas que eu ouvi de você, eu quero muito que dê certo. E eu vou fazer o possível pra ser o melhor pra nós dois. Espero que sempre possamos ter um ao outro e que ninguém consiga atrapalhar nosso relacionamento.</p>
+        <p>Eu gosto verdadeiramente de você e eu quero te conhecer melhor pra podermos fazer várias coisas legais juntos. Eu amo seus olhos e seu cabelo tão preto. Sério, eu amo sua personalidade e como você se veste. Eu realmente gosto muito de tudo em você. Adoro conversar com você sobre coisas que temos em comum e adoro te mimar quando eu consigo. Queria que a gente pudesse ter mais tempo juntos e queria muito te ensinar a jogar vários jogos KKKKKKKKKK</p>
+        <p>Mas, basicamente, eu espero que você possa se sentir sempre à vontade pra vir falar comigo quando algo te incomodar ou você se sentir insegura, ou até mesmo se qualquer coisa te deixar triste. Eu vou estar sempre aqui pro que você precisar</p>
+      </div>
+    </div>
+
+      <div class="close-row"><button class="btn-soft" type="button" data-close>Guardar no envelope 💌</button></div>
+    </div>
+
+    <div class="lt" id="lt-nova" hidden>
+    <h3 class="mine-title">E mais umas coisas que eu queria te dizer</h3>
+    <div class="letter-wrap">
+      <span class="tape tape-sky"></span>
+      <div class="stamp" aria-hidden="true"><div class="in"><svg viewBox="0 0 100 100"><use href="#antHead" width="100" height="100"/></svg></div></div>
+      <div class="letter">
+        <p class="hi">Evellyn, minha Eevee,</p>
+        <p>Eu sei que a gente tá só começando. Mas eu já adoro a leveza que eu tenho pra fazer qualquer coisa e falar qualquer coisa com você.</p>
+        <p>E sobre o seu texto: eu realmente não sinto vontade nenhuma de parar de ficar com você.</p>
+        <p>Eu acho você a pessoa mais interessante do mundo. A gente tem tantas coisas em comum, e isso me deixa feliz. Uma das coisas que eu mais gosto é poder fazer um monte de playlist com você. E você curte eletrônica! Eu nunca tinha achado uma mulher que gostasse.</p>
+        <p>Eu amo esse cabelo preto e esses olhos em que eu me perco toda vez. Amo o seu estilo, quase sempre todo de preto, que combina com o meu. (Mas eu queria que você experimentasse umas cores novas, tipo rosa. Você deve ficar adorável!!)</p>
+        <p>Eu adoro te provocar (desde o ícone da Caitlyn, kkkk), mas também adoro te encher de beijinhos, te dar presentes e te dizer o quanto eu te amo.</p>
+        <p>Eu amo o seu carinho. No seu colo eu me sinto seguro.</p>
+        <p>Você é introvertida e, mesmo assim, se abre comigo. Sou muito grato por isso. E gosto demais das nossas conversas, sobre tudo, até as mais do dia a dia.</p>
+        <p>Naquela noite na casa do Paulo, eu não parei de pensar em você nem por um momento. Eu só queria ficar perto de você.</p>
+        <p>Eu quero entrar cada vez mais no seu mundo pra ficar mais perto de você. Com você eu posso mostrar quem eu verdadeiramente sou, e isso me deixa muito feliz.</p>
+        <p>Eu amo como você é criativa. As suas coreografias são uma das coisas mais legais do mundo.</p>
+        <p>Eu realmente acredito que você vai passar no ENEM desse ano e entrar em psicologia na PUC. Quero muito que a gente divida vários momentos juntos na faculdade.</p>
+        <p>Quero te levar pra muitos shows de eletrônica, pra gente curtir muito. E quando a gente ficar mais velho, eu espero que a gente possa ir em várias houses, em todos os lugares do mundo. Eu quero muito ter uma aventura com você.</p>
+        <p>E eu presto atenção em tudo o que você fala. Tudo o que você fala é válido pra mim.</p>
+        <p>Toda vez que eu te beijo e te vejo, eu me apaixono cada vez mais. Você é o meu porto seguro.</p>
+        <p class="sign">Com todo o meu carinho,<br>João 💗</p>
+      </div>
+    </div>
+
+    <figure class="harbor">
+      <div class="harbor-pic">
+        <svg viewBox="0 0 200 180" role="img" aria-label="Um farol fofinho com um coração aceso e um barquinho chegando">
+          <defs>
+            <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd9ea"/>
+              <stop offset="1" stop-color="#dcecff"/>
+            </linearGradient>
+            <clipPath id="cpHarbor"><rect width="200" height="180" rx="28"/></clipPath>
+          </defs>
+          <g clip-path="url(#cpHarbor)">
+            <rect width="200" height="180" fill="url(#gSky)"/>
+            <path d="M100 62 L0 30 L0 86 Z" fill="#fff6c4" opacity=".7"/>
+            <path d="M100 62 L200 30 L200 86 Z" fill="#fff6c4" opacity=".7"/>
+            <use href="#sparkle" x="22" y="20" width="14" height="14" fill="#ffffff"/>
+            <use href="#sparkle" x="160" y="16" width="16" height="16" fill="#ffffff"/>
+            <use href="#sparkle" x="176" y="98" width="10" height="10" fill="#ffffff"/>
+            <use href="#sparkle" x="14" y="100" width="10" height="10" fill="#ffffff"/>
+            <path d="M0 140 Q25 131 50 140 T100 140 T150 140 T200 140 V180 H0 Z" fill="#b5d8ff"/>
+            <ellipse cx="100" cy="141" rx="44" ry="10" fill="#cdb9e0"/>
+            <path d="M88 76 L112 76 L117 140 L83 140 Z" fill="#ffffff"/>
+            <path d="M86.75 92 L113.25 92 L114.03 102 L85.97 102 Z" fill="#ff9cc2"/>
+            <path d="M84.87 116 L115.13 116 L115.91 126 L84.09 126 Z" fill="#ff9cc2"/>
+            <circle cx="95" cy="107.5" r="2.2" fill="#4a3046"/>
+            <circle cx="105" cy="107.5" r="2.2" fill="#4a3046"/>
+            <path d="M97.5 111 Q100 113.5 102.5 111" fill="none" stroke="#4a3046" stroke-width="1.8" stroke-linecap="round"/>
+            <ellipse cx="90.5" cy="111" rx="3" ry="1.7" fill="#ff8fbf" opacity=".75"/>
+            <ellipse cx="109.5" cy="111" rx="3" ry="1.7" fill="#ff8fbf" opacity=".75"/>
+            <path d="M95 140 V133 a5 5 0 0 1 10 0 V140 Z" fill="#c3a8de"/>
+            <rect x="90" y="54" width="20" height="18" rx="3" fill="#fff3a8" stroke="#4a3046" stroke-width="2.5"/>
+            <use href="#heart" x="93" y="56" width="14" height="14" fill="#ff5f9e"/>
+            <rect x="84" y="71" width="32" height="6" rx="3" fill="#4a3046"/>
+            <path d="M86 55 L114 55 L100 40 Z" fill="#ff8fbf" stroke="#4a3046" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="100" cy="37.5" r="3" fill="#4a3046"/>
+            <path d="M24 144 L54 144 L49 153 L29 153 Z" fill="#ffffff" stroke="#4a3046" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M39 144 V122" stroke="#4a3046" stroke-width="2" stroke-linecap="round"/>
+            <path d="M40.5 124 L40.5 141 L53 141 Z" fill="#ff9cc2"/>
+            <path d="M0 152 Q25 144 50 152 T100 152 T150 152 T200 152 V180 H0 Z" fill="#8ec5ff"/>
+          </g>
+        </svg>
+      </div>
+      <figcaption>meu porto seguro</figcaption>
+    </figure>
+      <div class="close-row"><button class="btn-soft" type="button" data-close>Guardar no envelope 💌</button></div>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="mnote" role="dialog" aria-modal="true" aria-labelledby="mk">
+    <span class="tape tape-pink"></span>
+    <div class="em" id="mem" aria-hidden="true"></div>
+    <p class="k" id="mk"></p>
+    <p class="mt" id="mt"></p>
+    <button class="btn" id="mclose" type="button">Fechar</button>
+  </div>
+</div>
+
+<nav class="nav" aria-label="Abas do site">
+  <div class="in" role="tablist">
+    <button class="tab c-pink" type="button" role="tab" data-tab="inicio" aria-selected="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg>Início
+    </button>
+    <button class="tab c-lilac" type="button" role="tab" data-tab="historia" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14"/><circle cx="6" cy="6" r="2" fill="currentColor"/><circle cx="6" cy="12" r="2" fill="currentColor"/><circle cx="6" cy="18" r="2" fill="currentColor"/><path d="M11 6h8M11 12h6M11 18h8"/></svg>História
+    </button>
+    <button class="tab c-vanilla" type="button" role="tab" data-tab="voce" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14.5" r="6.5"/><path d="M9.6 8.6C9.2 6 7.8 4.4 5.5 3.8M14.4 8.6c.4-2.6 1.8-4.2 4.1-4.8"/><circle cx="9.7" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="14.3" cy="14" r="1" fill="currentColor" stroke="none"/></svg>Você
+    </button>
+    <button class="tab c-peach" type="button" role="tab" data-tab="anotado" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M8.5 9.5l1.6 1.6L13.6 7.6M8.5 15h7"/></svg>Anotado
+    </button>
+    <button class="tab c-sky" type="button" role="tab" data-tab="motivos" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5C12 20.5 3 14.9 3 8.9 3 6.1 5.1 4 7.7 4c1.8 0 3.3 1 4.3 2.6C13 5 14.5 4 16.3 4 18.9 4 21 6.1 21 8.9c0 6-9 11.6-9 11.6z"/></svg>Motivos
+    </button>
+    <button class="tab c-mint" type="button" role="tab" data-tab="carta" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.6 7.2 8.4 6 8.4-6"/></svg>Cartas
+    </button>
+  </div>
+</nav>
+
+<script>
+(() => {
+  const reasons = [
+    { e: "✨", t: "Esses olhos, em que eu me perco toda vez." },
+    { e: "🖤", t: "Esse cabelo preto lindo." },
+    { e: "🕶️", t: "O seu estilo, quase sempre todo de preto, que combina com o meu." },
+    { e: "🌎", t: "Você é a pessoa mais interessante do mundo." },
+    { e: "💗", t: "O seu carinho. No seu colo eu me sinto seguro." },
+    { e: "🌷", t: "Você é bem introvertida, mas se abre comigo. E eu sou muito grato por isso." },
+    { e: "💬", t: "As nossas conversas sobre tudo, até as mais do dia a dia." },
+    { e: "🧩", t: "A gente tem tantas coisas em comum. E isso me deixa feliz." },
+    { e: "🎶", t: "Poder fazer um monte de playlist com você." },
+    { e: "🎛️", t: "Você curte eletrônica. Eu nunca tinha achado uma mulher que gostasse!" },
+    { e: "🎧", t: "O seu amor por música (e por Ghost Mountain)." },
+    { e: "📚", t: "O quanto você adora ler." },
+    { e: "🔍", t: "Você sabe de muita coisa que eu não sei. Isso me deixa muito curioso por você." },
+    { e: "💿", t: "Quando você me apresenta o seu mundo, tipo Ghost Mountain e Radiohead." },
+    { e: "🎤", t: "Com você eu posso mostrar quem eu verdadeiramente sou." },
+    { e: "⭐", t: "Você é uma mulher muito dedicada." },
+    { e: "🍦", t: "Você é a minha formiguinha: adora um doce, principalmente sorvete. De verdade, claro." },
+    { e: "🎈", t: "A leveza que eu tenho pra fazer qualquer coisa e falar qualquer coisa com você." },
+    { e: "😚", t: "Eu adoro encher o seu saco… mas também adoro te encher de beijinhos." },
+    { e: "💃", t: "Como você é criativa. As suas coreografias de dança são uma das coisas mais legais do mundo." },
+    { e: "🎓", t: "O seu sonho de fazer psicologia na PUC-Rio. Eu realmente acredito que você vai passar." },
+    { e: "💙", t: "Ouvir você falar das coisas que você gosta. Eu presto atenção em tudo, e tudo o que você fala é válido pra mim." },
+    { e: "💘", t: "Toda vez que eu te beijo e te vejo, eu me apaixono cada vez mais." },
+    { e: "⚓", t: "Você é o meu porto seguro." }
+  ];
+  const replies = [
+    { e: "🌎", t: "Nem precisa prometer: eu acho você a pessoa mais interessante do mundo!" },
+    { e: "💗", t: "Eu realmente não sinto vontade nenhuma de parar de ficar com você." },
+    { e: "🧩", t: "De certo jeito, conhece mesmo: a gente se conheceu no LoL muito antes de se ver. E temos tantas coisas em comum… isso me deixa feliz." },
+    { e: "💘", t: "E toda vez que eu te beijo e te vejo, eu me apaixono cada vez mais." }
+  ];
+  const KEY = "eevee-motivos-v4";
+
+  /* abas */
+  const tabs = [...document.querySelectorAll(".tab")];
+  const panels = [...document.querySelectorAll(".panel")];
+  const go = (id) => {
+    panels.forEach((p) => p.classList.toggle("on", p.id === id));
+    tabs.forEach((t) => t.setAttribute("aria-selected", String(t.dataset.tab === id)));
+    window.scrollTo(0, 0);
+  };
+  tabs.forEach((t) => t.addEventListener("click", () => go(t.dataset.tab)));
+
+  /* contadores */
+  const pad = (n) => String(n).padStart(2, "0");
+  const counters = [...document.querySelectorAll("[data-since]")].map((el) => {
+    const [y, m, d] = el.dataset.since.split("-").map(Number);
+    return {
+      start: new Date(y, m - 1, d).getTime(),
+      d: el.querySelector('[data-u="d"]'),
+      h: el.querySelector('[data-u="h"]'),
+      m: el.querySelector('[data-u="m"]'),
+      s: el.querySelector('[data-u="s"]')
+    };
+  });
+  const tick = () => {
+    const now = Date.now();
+    counters.forEach((c) => {
+      let t = Math.max(0, Math.floor((now - c.start) / 1000));
+      const days = Math.floor(t / 86400); t -= days * 86400;
+      const h = Math.floor(t / 3600); t -= h * 3600;
+      const mi = Math.floor(t / 60);
+      const se = t - mi * 60;
+      c.d.textContent = days;
+      c.h.textContent = pad(h);
+      c.m.textContent = pad(mi);
+      c.s.textContent = pad(se);
+    });
+  };
+  const bdayUnits = document.getElementById("bdayUnits");
+  const bdayToday = document.getElementById("bdayToday");
+  const bu = {
+    d: document.querySelector('[data-b="d"]'),
+    h: document.querySelector('[data-b="h"]'),
+    m: document.querySelector('[data-b="m"]'),
+    s: document.querySelector('[data-b="s"]')
+  };
+  const isBirthday = (d) => d.getMonth() === 8 && d.getDate() === 23;
+  const tickBday = () => {
+    const now = new Date();
+    const today = isBirthday(now);
+    bdayUnits.hidden = today;
+    bdayToday.hidden = !today;
+    if (today) return;
+    let target = new Date(now.getFullYear(), 8, 23);
+    if (target <= now) target = new Date(now.getFullYear() + 1, 8, 23);
+    let t = Math.max(0, Math.floor((target - now) / 1000));
+    const days = Math.floor(t / 86400); t -= days * 86400;
+    const h = Math.floor(t / 3600); t -= h * 3600;
+    const mi = Math.floor(t / 60);
+    bu.d.textContent = days;
+    bu.h.textContent = pad(h);
+    bu.m.textContent = pad(mi);
+    bu.s.textContent = pad(t - mi * 60);
+  };
+  if (isBirthday(new Date())) {
+    const sp = document.querySelector(".splash p");
+    if (sp) sp.textContent = "Feliz aniversário! 🎂 Eu fiz uma coisinha pra você.";
+  }
+  tick();
+  tickBday();
+  setInterval(() => { tick(); tickBday(); }, 1000);
+
+  /* coraçõezinhos */
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const colors = ["#ff5f9e", "#ff9cc2", "#8ec5ff", "#ffcc4d", "#c9a8ff"];
+  const NS = "http://www.w3.org/2000/svg";
+  const burst = (x, y, n = 12) => {
+    if (reduce) return;
+    for (let i = 0; i < n; i++) {
+      const s = document.createElementNS(NS, "svg");
+      s.setAttribute("viewBox", "0 0 24 24");
+      s.setAttribute("class", "burst");
+      s.setAttribute("aria-hidden", "true");
+      const u = document.createElementNS(NS, "use");
+      u.setAttribute("href", "#heart");
+      s.appendChild(u);
+      const a = Math.random() * Math.PI * 2;
+      const r = 50 + Math.random() * 80;
+      const size = 14 + Math.random() * 14;
+      s.style.left = x + "px";
+      s.style.top = y + "px";
+      s.style.width = size + "px";
+      s.style.height = size + "px";
+      s.style.fill = colors[i % colors.length];
+      s.style.setProperty("--dx", (Math.cos(a) * r).toFixed(1) + "px");
+      s.style.setProperty("--dy", (Math.sin(a) * r - 50).toFixed(1) + "px");
+      document.body.appendChild(s);
+      setTimeout(() => s.remove(), 1200);
+    }
+  };
+  const mascot = document.getElementById("mascot");
+  mascot.addEventListener("click", (e) => {
+    const r = mascot.getBoundingClientRect();
+    burst(e.clientX || r.left + r.width / 2, e.clientY || r.top + r.height / 2, 14);
+  });
+
+  /* envelopes */
+  const opened = new Set();
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw) {
+      JSON.parse(raw).forEach((i) => {
+        if (Number.isInteger(i) && i >= 0 && i < reasons.length) opened.add(i);
+      });
+    }
+  } catch (e) { /* sem armazenamento: tudo bem */ }
+  const save = () => {
+    try { localStorage.setItem(KEY, JSON.stringify([...opened])); } catch (e) { /* ignora */ }
+  };
+  const prog = document.getElementById("prog");
+  const updateProg = () => {
+    const n = opened.size;
+    prog.textContent = n === 0
+      ? "Nenhum aberto ainda"
+      : n === reasons.length
+        ? "Todos abertos 💗"
+        : `${n} de ${reasons.length} abertos`;
+  };
+
+  const envSVG =
+    '<svg viewBox="0 0 80 64" aria-hidden="true">' +
+      '<g class="closed">' +
+        '<rect x="5" y="10" width="70" height="48" rx="8" fill="#ffffff" stroke="#f3a3c4" stroke-width="2.5"/>' +
+        '<path d="M7 13 L40 37 L73 13" fill="#ffe1ee" stroke="#f3a3c4" stroke-width="2.5" stroke-linejoin="round"/>' +
+        '<use href="#heart" x="30" y="25" width="20" height="20" fill="#ff5f9e"/>' +
+      '</g>' +
+      '<g class="open">' +
+        '<path d="M5 30 L40 6 L75 30 Z" fill="#ffe1ee" stroke="#f3a3c4" stroke-width="2.5" stroke-linejoin="round"/>' +
+        '<rect x="14" y="13" width="52" height="34" rx="4" fill="#fffdf6" stroke="#f6c9db" stroke-width="2"/>' +
+        '<use href="#heart" x="32" y="17" width="16" height="16" fill="#ff8fbf"/>' +
+        '<path d="M5 30 V52 a6 6 0 0 0 6 6 H69 a6 6 0 0 0 6 -6 V30 L40 48 Z" fill="#ffffff" stroke="#f3a3c4" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '</g>' +
+    '</svg>';
+  const tilts = [-3, 2, -1, 3, -2, 1, 2, -3, 1, -1, 3, -2];
+
+  const grid = document.getElementById("envs");
+  const modal = document.getElementById("modal");
+  const mem = document.getElementById("mem");
+  const mk = document.getElementById("mk");
+  const mt = document.getElementById("mt");
+  const mclose = document.getElementById("mclose");
+  let lastBtn = null;
+
+  const openModal = (item, label, btn) => {
+    mem.textContent = item.e;
+    mk.textContent = label;
+    mt.textContent = item.t;
+    lastBtn = btn;
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+    setTimeout(() => mclose.focus({ preventScroll: true }), 60);
+  };
+  const closeModal = () => {
+    if (!modal.classList.contains("show")) return;
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+    if (lastBtn) lastBtn.focus({ preventScroll: true });
+  };
+
+  reasons.forEach((r, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "env" + (opened.has(i) ? " opened" : "");
+    b.style.setProperty("--r", tilts[i % tilts.length] + "deg");
+    b.setAttribute("aria-label", `Abrir o motivo ${i + 1}`);
+    b.innerHTML = envSVG + `<span class="n">${i + 1}</span>`;
+    b.addEventListener("click", () => {
+      const first = !opened.has(i);
+      opened.add(i);
+      b.classList.add("opened");
+      save();
+      updateProg();
+      openModal(reasons[i], `Motivo nº ${i + 1}`, b);
+      if (first) {
+        const rect = b.getBoundingClientRect();
+        burst(rect.left + rect.width / 2, rect.top + rect.height / 2, 8);
+      }
+    });
+    grid.appendChild(b);
+  });
+  updateProg();
+
+  const combos = [
+    { e: "🎮", l: "LoL", t: "Foi jogando LoL que a gente se conheceu, muito antes de se ver pela primeira vez." },
+    { e: "🦋", l: "Life is Strange", t: "Foi o primeiro jogo em comum que a gente falou, e nós dois gostamos." },
+    { e: "🎼", l: "Playlist de OSTs", t: "Daí veio a ideia de criar uma playlist de músicas de jogos, as OSTs." },
+    { e: "⚔️", l: "Attack on Titan", t: "A gente ama. E você é a única pessoa que não me chama de virgem por eu já ter mordido a minha mão achando que ia virar titã KKKKKKKKKK" },
+    { e: "🎤", l: "K-pop", t: "Você ama grupos coreanos. E eu secretamente ouço k-pop… então fico muito feliz de poder mostrar quem eu verdadeiramente sou pra você." },
+    { e: "🖤", l: "Tudo preto", t: "O seu jeito de se vestir combina com o meu." },
+    { e: "🎧", l: "Eletrônica", t: "Eu nunca tinha achado uma mulher que gostasse de eletrônica! Quero te levar pra muitos shows, pra gente curtir muito." },
+    { e: "🎓", l: "PUC-Rio", t: "A minha faculdade, e onde você quer fazer psicologia. Eu realmente acredito que você vai passar, e quero muito dividir vários momentos com você lá." }
+  ];
+  const comboColors = ["--pink", "--lilac", "--vanilla", "--sky", "--mint"];
+  const comboTilts = [-3, 2, -2, 3, -1, 2, -3];
+  const comboBox = document.getElementById("combos");
+  combos.forEach((c, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "chipbtn";
+    b.style.setProperty("--cc", `var(${comboColors[i % comboColors.length]})`);
+    b.style.setProperty("--r", comboTilts[i % comboTilts.length] + "deg");
+    const em = document.createElement("span");
+    em.className = "ce";
+    em.setAttribute("aria-hidden", "true");
+    em.textContent = c.e;
+    b.append(em, c.l);
+    b.addEventListener("click", () => openModal(c, c.l, b));
+    comboBox.appendChild(b);
+  });
+
+  document.querySelectorAll(".hl").forEach((el) => {
+    const show = () => {
+      const rep = replies[Number(el.dataset.r)];
+      if (rep) openModal(rep, "Minha resposta", el);
+    };
+    el.addEventListener("click", show);
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(); }
+    });
+  });
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  mclose.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+  /* tema: tudo preto ou rosa */
+  const THEME_KEY = "eevee-tema";
+  const themeBtns = [...document.querySelectorAll("[data-tema]")];
+  const darkMQ = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  const currentTheme = () => {
+    const root = document.documentElement;
+    if (root.classList.contains("tema-preto")) return "preto";
+    if (root.classList.contains("tema-rosa")) return "rosa";
+    if (root.classList.contains("tema-azul")) return "azul";
+    const dt = root.getAttribute("data-theme");
+    if (dt === "dark") return "preto";
+    if (dt === "light") return "azul";
+    return darkMQ && darkMQ.matches ? "preto" : "azul";
+  };
+  const paintTheme = () => {
+    const cur = currentTheme();
+    themeBtns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tema === cur)));
+  };
+  themeBtns.forEach((b) => b.addEventListener("click", () => {
+    const root = document.documentElement;
+    root.classList.remove("tema-preto", "tema-rosa", "tema-azul");
+    root.classList.add("tema-" + b.dataset.tema);
+    try { localStorage.setItem(THEME_KEY, b.dataset.tema); } catch (e) { /* ignora */ }
+    paintTheme();
+    const r = b.getBoundingClientRect();
+    burst(r.left + r.width / 2, r.top + r.height / 2, 8);
+  }));
+  if (darkMQ && darkMQ.addEventListener) darkMQ.addEventListener("change", paintTheme);
+  paintTheme();
+
+  /* fitinha */
+  const fita = document.getElementById("fita");
+  const nowPlaying = document.getElementById("nowPlaying");
+  fita.addEventListener("click", () => {
+    const on = !fita.classList.contains("playing");
+    fita.classList.toggle("playing", on);
+    fita.setAttribute("aria-pressed", String(on));
+    nowPlaying.hidden = !on;
+  });
+
+  /* cartas em envelopes */
+  const mailSVG =
+    '<svg viewBox="0 0 80 64" aria-hidden="true">' +
+      '<g class="closed">' +
+        '<rect x="5" y="10" width="70" height="48" rx="8" class="paper" stroke-width="2.5"/>' +
+        '<path d="M7 13 L40 37 L73 13" class="flap" stroke-width="2.5" stroke-linejoin="round"/>' +
+        '<use href="#heart" x="30" y="25" width="20" height="20" fill="#ff5f9e"/>' +
+      '</g>' +
+      '<g class="open">' +
+        '<path d="M5 30 L40 6 L75 30 Z" class="flap" stroke-width="2.5" stroke-linejoin="round"/>' +
+        '<rect x="14" y="13" width="52" height="34" rx="4" fill="#fffdf6" stroke="#ead7e1" stroke-width="2"/>' +
+        '<path d="M22 21 H58 M22 28 H58 M22 35 H46" stroke="#e7b9cd" stroke-width="2" stroke-linecap="round"/>' +
+        '<path d="M5 30 V52 a6 6 0 0 0 6 6 H69 a6 6 0 0 0 6 -6 V30 L40 48 Z" class="paper" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '</g>' +
+    '</svg>';
+  const mailBtns = [...document.querySelectorAll(".mailbtn")];
+  const letterBoxes = [...document.querySelectorAll(".lt")];
+  const showLetter = (id) => {
+    mailBtns.forEach((b) => b.setAttribute("aria-expanded", String(b.dataset.open === id)));
+    letterBoxes.forEach((l) => { l.hidden = l.id !== "lt-" + id; });
+  };
+  mailBtns.forEach((btn) => {
+    btn.insertAdjacentHTML("afterbegin", mailSVG);
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      showLetter(isOpen ? "" : btn.dataset.open);
+      if (!isOpen) {
+        const r = btn.getBoundingClientRect();
+        burst(r.left + r.width / 2, r.top + r.height / 2, 8);
+        const box = document.getElementById("lt-" + btn.dataset.open);
+        setTimeout(() => box.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }), 120);
+      }
+    });
+  });
+  document.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => {
+    showLetter("");
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  }));
+
+  /* torcida pro ENEM (8 e 15/11/2026) */
+  (() => {
+    const d = new Date();
+    if (d.getFullYear() !== 2026 || d.getMonth() !== 10) return;
+    const msgs = {
+      8: "Hoje é dia de ENEM! Boa prova, Eevee 💙 Eu realmente acredito que você vai passar.",
+      15: "Último dia de ENEM, e hoje tem matemática… lembra das minhas explicações? 😄 Boa prova, Eevee 💙"
+    };
+    const msg = msgs[d.getDate()];
+    if (!msg) return;
+    document.getElementById("enemText").textContent = msg;
+    document.getElementById("enem").hidden = false;
+  })();
+
+  /* abertura */
+  const splash = document.getElementById("splash");
+  const openBtn = document.getElementById("openBtn");
+  openBtn.addEventListener("click", () => {
+    const r = openBtn.getBoundingClientRect();
+    burst(r.left + r.width / 2, r.top + r.height / 2, 18);
+    splash.classList.add("gone");
+    document.documentElement.classList.remove("locked");
+    setTimeout(() => splash.remove(), 600);
+  });
+})();
+</script>
+</body>
+</html>
