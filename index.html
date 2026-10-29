@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#151217" media="(prefers-color-scheme: dark)">
 <title>Pra minha Eevee</title>
 <meta name="description" content="Eu fiz uma coisinha pra você.">
+<meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Pra minha Eevee 💙">
 <meta property="og:description" content="Eu fiz uma coisinha pra você.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8D%A6%3C/text%3E%3C/svg%3E">
@@ -407,6 +408,33 @@ p,figure{margin:0}
 .polas .pola{flex:0 0 calc(50% - 7px);max-width:150px}
 .pola:nth-child(3){transform:rotate(-2deg);margin-top:4px}
 
+/* aulinha de 7 x 3 */
+.aula{padding:18px 0 20px;border-top:2px dashed var(--paper-line)}
+.aula + .item{border-top:2px dashed var(--paper-line)}
+.aula-k{font-size:13px;font-weight:700;color:var(--berry-ink)}
+.aula h3{font-size:22px;margin:2px 0 6px}
+.aula-intro{font-size:15.5px}
+.aula-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:14px 0 12px}
+.cell{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;border-radius:10px;background:var(--bg);transition:background-color .25s}
+.cell svg{width:78%;height:78%}
+.cell .num{position:absolute;right:-2px;bottom:-4px;min-width:17px;height:17px;padding:0 3px;border-radius:9px;background:var(--btn);color:var(--on-btn);font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-size:10.5px;font-weight:800;line-height:17px;text-align:center;opacity:0;transform:scale(.6);transition:opacity .2s,transform .2s}
+.cell.on .num{opacity:1;transform:none}
+.aula-grid[data-mode="linhas"] .cell[data-r="0"]{background:#ffd6e6}
+.aula-grid[data-mode="linhas"] .cell[data-r="1"]{background:#cfe6ff}
+.aula-grid[data-mode="linhas"] .cell[data-r="2"]{background:#fff0bf}
+.aula-grid[data-mode="colunas"] .cell[data-c="0"],.aula-grid[data-mode="colunas"] .cell[data-c="4"]{background:#ffd6e6}
+.aula-grid[data-mode="colunas"] .cell[data-c="1"],.aula-grid[data-mode="colunas"] .cell[data-c="5"]{background:#cfe6ff}
+.aula-grid[data-mode="colunas"] .cell[data-c="2"],.aula-grid[data-mode="colunas"] .cell[data-c="6"]{background:#fff0bf}
+.aula-grid[data-mode="colunas"] .cell[data-c="3"]{background:#cdf1de}
+.aula-grid[data-mode="contar"] .cell.on{background:#e3d8ff}
+.aula-btns{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.aula-b{appearance:none;-webkit-appearance:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 2px var(--paper-line);font-weight:700;font-size:14px;padding:8px 12px;border-radius:999px}
+.aula-b[aria-pressed="true"]{background:var(--btn);color:var(--on-btn);box-shadow:none}
+.aula-conta{margin-top:14px;text-align:center;font-family:"Sniglet","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;font-weight:800;font-size:22px;color:var(--berry);min-height:1.3em}
+.aula-exp{margin-top:6px;text-align:center;font-size:15px;color:var(--ink-soft)}
+
+.jnote{margin-top:4px;padding-top:12px;border-top:1px dashed var(--paper-line);font-size:15px;line-height:1.45}
+
 /* abinhas de caderno */
 .nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--nav);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:2px solid var(--line);padding:10px 8px calc(8px + env(safe-area-inset-bottom,0px))}
 .nav .in{max-width:480px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
@@ -607,13 +635,15 @@ p,figure{margin:0}
           <li><b>Perfect</b> <em>One Direction</em><span>A música que fica na minha cabeça quando eu penso em você.</span></li>
           <li><b>Ghost Mountain</b><span>O seu artista favorito, que você me apresentou.</span></li>
           <li><b>Radiohead</b><span>Você me apresentou também, e eu achei muito legal.</span></li>
+          <li><b>f(x)</b><span>O primeiro grupo de k-pop que você começou a ouvir. Uma função matemática, olha só 😄</span></li>
         </ol>
         <p class="side">Lado B</p>
-        <ol class="tracks" start="4">
+        <ol class="tracks" start="5">
           <li><b>OSTs de jogos</b><span>A nossa playlist, que nasceu do Life is Strange.</span></li>
           <li><b>Eletrônica</b><span>Pros muitos shows que eu quero te levar, e pra todas as houses que a gente ainda vai conhecer pelo mundo.</span></li>
           <li><b>K-pop</b><span>O seu amor por grupos coreanos. E o meu segredinho.</span></li>
         </ol>
+        <p class="jnote">Pra ouvir andando com você por vários lugares. E queria que você falasse mais de música comigo: você é tão inteligente nisso, e eu adoro ouvir você falar.</p>
       </div>
     </section>
 
@@ -785,7 +815,7 @@ p,figure{margin:0}
           <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><defs><radialGradient id="gBall" cx=".36" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#dfe6ff"/><stop offset="1" stop-color="#9eaad8"/></radialGradient><clipPath id="cpBall"><circle cx="60" cy="64" r="28"/></clipPath></defs><circle cx="60" cy="60" r="55" fill="#3a2f63" stroke="#ffffff" stroke-width="6"/><path d="M60 10 V36" stroke="#cbbdf0" stroke-width="2.5" stroke-linecap="round"/><circle cx="60" cy="64" r="28" fill="url(#gBall)"/><g clip-path="url(#cpBall)"><rect x="44" y="50" width="7" height="6" fill="#ffc2dc"/><rect x="66" y="62" width="7" height="6" fill="#bfe0ff"/><rect x="52" y="74" width="7" height="6" fill="#fff0b3"/><rect x="70" y="44" width="7" height="6" fill="#d9ccff"/><g fill="none" stroke="#8a97cc" stroke-width="1.2" opacity=".85"><path d="M30 43 H90 M30 50 H90 M30 57 H90 M30 64 H90 M30 71 H90 M30 78 H90 M30 85 H90 M60 30 V100"/><ellipse cx="60" cy="64" rx="9" ry="28"/><ellipse cx="60" cy="64" rx="18" ry="28"/><ellipse cx="60" cy="64" rx="25" ry="28"/></g></g><use href="#sparkle" x="43" y="45" width="13" height="13" fill="#ffffff"/><use href="#sparkle" x="18" y="32" width="16" height="16" fill="#ff8fbf"/><use href="#sparkle" x="86" y="24" width="13" height="13" fill="#ffcc4d"/><use href="#sparkle" x="88" y="80" width="15" height="15" fill="#8ec5ff"/><use href="#heart" x="22" y="80" width="14" height="14" fill="#ff8fbf"/></svg>
           <p class="when">Próximo episódio</p>
           <h3>Tudo o que a gente ainda vai viver</h3>
-          <p class="txt">A gente viveu pouca coisa por enquanto… mas eu quero viver muita coisa com você ainda. Você na PUC, fazendo psicologia, e a gente dividindo vários momentos juntos na faculdade. Muitos shows de eletrônica. E uma aventura por várias houses, em todos os lugares do mundo.</p>
+          <p class="txt">A gente viveu pouca coisa por enquanto… mas eu quero viver muita coisa com você ainda. Você na PUC, fazendo psicologia, e a gente dividindo vários momentos juntos na faculdade. Andar com você por vários lugares, ouvindo música. Muitos shows de eletrônica. E uma aventura por várias houses, em todos os lugares do mundo.</p>
           <div class="polas">
             <figure class="pola">
               <span class="tape tape-pink"></span>
@@ -801,6 +831,11 @@ p,figure{margin:0}
               <span class="tape tape-sky"></span>
               <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e58fb4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5h3.2L8.8 6h6.4l1.6 2.5H20V19H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg><span>em breve</span></div>
               <figcaption class="cap">você caloura na PUC</figcaption>
+            </figure>
+            <figure class="pola">
+              <span class="tape tape-mint"></span>
+              <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e58fb4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5h3.2L8.8 6h6.4l1.6 2.5H20V19H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg><span>em breve</span></div>
+              <figcaption class="cap">a gente andando por aí, ouvindo música</figcaption>
             </figure>
           </div>
         </article>
@@ -867,7 +902,7 @@ p,figure{margin:0}
         </svg>
         <div>
           <h3>Música</h3>
-          <p>Ghost Mountain é o seu artista favorito, e foi você que me apresentou, junto com o Radiohead. Achei muito legal! Você também curte eletrônica (eu nunca tinha achado uma mulher que gostasse!). Uma das coisas que eu mais gosto é poder fazer um monte de playlist com você.</p>
+          <p>Ghost Mountain é o seu artista favorito, e foi você que me apresentou, junto com o Radiohead. Achei muito legal! Você também curte eletrônica (eu nunca tinha achado uma mulher que gostasse!). Uma das coisas que eu mais gosto é poder fazer um monte de playlist com você. E você é tão inteligente falando de música… eu adoro te ouvir.</p>
         </div>
       </div>
 
@@ -929,7 +964,7 @@ p,figure{margin:0}
         </svg>
         <div>
           <h3>Seu jeitinho</h3>
-          <p>Você é bem introvertida, mas comigo você se abre. E eu sou muito grato por isso.</p>
+          <p>Você é bem introvertida, mas comigo você se abre. E eu sou muito grato por isso. Eu também adoro como você consegue me tranquilizar em qualquer situação.</p>
         </div>
       </div>
 
@@ -967,7 +1002,7 @@ p,figure{margin:0}
         <svg class="stk" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="#fdeaf3" stroke="#ffffff" stroke-width="6"/><path d="M60 40 L47 25 M60 40 L73 25" stroke="#8e7aa8" stroke-width="3" stroke-linecap="round"/><circle cx="47" cy="25" r="3.5" fill="#ff8fbf"/><circle cx="73" cy="25" r="3.5" fill="#ff8fbf"/><rect x="26" y="40" width="68" height="46" rx="12" fill="#a9d0ff"/><rect x="33" y="47" width="42" height="32" rx="7" fill="#fff6fa"/><use href="#heart" x="45" y="52" width="18" height="18" fill="#ff6fa8"/><circle cx="84" cy="55" r="4" fill="#ffffff"/><circle cx="84" cy="67" r="4" fill="#ffffff"/><rect x="36" y="86" width="8" height="8" rx="2" fill="#8e7aa8"/><rect x="76" y="86" width="8" height="8" rx="2" fill="#8e7aa8"/><use href="#sparkle" x="88" y="26" width="14" height="14" fill="#f6c453"/><use href="#sparkle" x="16" y="56" width="11" height="11" fill="#c9a8ff"/></svg>
         <div>
           <h3>Dorama</h3>
-          <p>Você ama dorama e grupos coreanos.</p>
+          <p>Você ama dorama e grupos coreanos. O primeiro grupo que você começou a ouvir foi o f(x).</p>
         </div>
       </div>
 
@@ -985,6 +1020,20 @@ p,figure{margin:0}
           <h3>Matemática</h3>
           <p>Eu adoro te explicar matemática, mesmo você falando que não gosta muito. (Ainda vou fazer você gostar!!!)</p>
         </div>
+      </div>
+
+      <div class="aula">
+        <p class="aula-k">Aulinha rápida</p>
+        <h3>Por que 7 × 3 = 21?</h3>
+        <p class="aula-intro">Lembra que antes isso não entrava na sua cabeça? 😄 Multiplicar é só juntar grupinhos do mesmo tamanho. Olha essas 21 formiguinhas:</p>
+        <div class="aula-grid" id="aulaGrid" data-mode="linhas" role="img" aria-label="21 formiguinhas arrumadas em 3 fileiras de 7"></div>
+        <div class="aula-btns" role="group" aria-label="Jeitos de ver a conta">
+          <button class="aula-b" type="button" data-modo="linhas" aria-pressed="true">3 fileiras de 7</button>
+          <button class="aula-b" type="button" data-modo="colunas" aria-pressed="false">7 colunas de 3</button>
+          <button class="aula-b" type="button" data-modo="contar" aria-pressed="false">Contar uma por uma</button>
+        </div>
+        <p class="aula-conta" id="aulaConta" aria-live="polite">7 + 7 + 7 = 21</p>
+        <p class="aula-exp" id="aulaExp">São 3 fileiras com 7 formiguinhas em cada uma. 7 + 7 = 14, e 14 + 7 = 21.</p>
       </div>
 
       <div class="item">
@@ -1024,18 +1073,22 @@ p,figure{margin:0}
         <li>É uma mulher muito dedicada.</li>
         <li>É muito criativa: tinha um canal no YouTube com coreografias de dança.</li>
         <li>Sabe de muita coisa que eu não sei.</li>
+        <li>Consegue me tranquilizar em qualquer situação.</li>
+        <li>É muito inteligente quando o assunto é música (eu adoro ouvir você falar).</li>
+        <li>É competitiva, que nem eu (KKKKKK).</li>
       </ul>
       <h3 class="nb-h">O que você ama</h3>
       <ul class="check">
         <li>Música, muito! Principalmente Ghost Mountain, o seu artista favorito, que você me apresentou.</li>
         <li>Radiohead, que você também me apresentou.</li>
         <li>Música eletrônica.</li>
-        <li>Grupos coreanos e dorama.</li>
+        <li>Grupos coreanos (o primeiro que você começou a ouvir foi o f(x)) e dorama.</li>
         <li>Attack on Titan.</li>
         <li>Life is Strange, o primeiro jogo em comum que a gente falou.</li>
         <li>LoL, onde a gente se conheceu (e aquele ícone exclusivo da Caitlyn que você queria muito).</li>
         <li>A Hello Kitty e a turma dela, principalmente o Cinnamoroll.</li>
         <li>Ler livros.</li>
+        <li>Andar, e as nossas competições de caminhada toda semana.</li>
         <li>Doce, principalmente sorvete de verdade.</li>
       </ul>
       <h3 class="nb-h">Os seus planos</h3>
@@ -1046,7 +1099,7 @@ p,figure{margin:0}
       <h3 class="nb-h">O que você não curte muito</h3>
       <ul class="check">
         <li>Massa de sorvete tipo McDonald’s. Isso não é sorvete de verdade!</li>
-        <li>Matemática… por enquanto. (Ainda vou fazer você gostar!!!)</li>
+        <li>Matemática… por enquanto. (Ainda vou fazer você gostar!!! Já deixei uma aulinha de 7 × 3 pra você na aba Você 😄)</li>
       </ul>
     </div>
   </section>
@@ -1059,7 +1112,7 @@ p,figure{margin:0}
     </header>
     <p class="progress" id="prog" aria-live="polite"></p>
     <div class="envs" id="envs"></div>
-    <p class="math-note"><span class="lim">lim<sub>n→∞</sub> motivos(n) = ∞</span>São 24 aqui… mas a lista de verdade não tem fim.<small>(Viu? Matemática também pode ser fofa.)</small></p>
+    <p class="math-note"><span class="lim">lim<sub>n→∞</sub> motivos(n) = ∞</span>São 30 aqui… mas a lista de verdade não tem fim.<small>(Viu? Matemática também pode ser fofa.)</small></p>
   </section>
 
   <!-- CARTA -->
@@ -1120,10 +1173,11 @@ p,figure{margin:0}
         <p>Eu acho você a pessoa mais interessante do mundo. A gente tem tantas coisas em comum, e isso me deixa feliz. Uma das coisas que eu mais gosto é poder fazer um monte de playlist com você. E você curte eletrônica! Eu nunca tinha achado uma mulher que gostasse.</p>
         <p>Eu amo esse cabelo preto e esses olhos em que eu me perco toda vez. Amo o seu estilo, quase sempre todo de preto, que combina com o meu. (Mas eu queria que você experimentasse umas cores novas, tipo rosa. Você deve ficar adorável!!)</p>
         <p>Eu adoro te provocar (desde o ícone da Caitlyn, kkkk), mas também adoro te encher de beijinhos, te dar presentes e te dizer o quanto eu te amo.</p>
-        <p>Eu amo o seu carinho. No seu colo eu me sinto seguro.</p>
+        <p>Eu amo o seu carinho. No seu colo eu me sinto seguro, e eu adoro como você consegue me tranquilizar em qualquer situação.</p>
         <p>Você é introvertida e, mesmo assim, se abre comigo. Sou muito grato por isso. E gosto demais das nossas conversas, sobre tudo, até as mais do dia a dia.</p>
         <p>Naquela noite na casa do Paulo, eu não parei de pensar em você nem por um momento. Eu só queria ficar perto de você.</p>
         <p>Eu quero entrar cada vez mais no seu mundo pra ficar mais perto de você. Com você eu posso mostrar quem eu verdadeiramente sou, e isso me deixa muito feliz.</p>
+        <p>Eu amo as nossas competições de caminhada (a gente é competitivo demais KKKKKK), e o meu sonho é andar com você por vários lugares, ouvindo música. E queria que você falasse mais de música comigo: você é tão inteligente nisso, e eu adoro ouvir você falar.</p>
         <p>Eu amo como você é criativa. As suas coreografias são uma das coisas mais legais do mundo.</p>
         <p>Eu realmente acredito que você vai passar no ENEM desse ano e entrar em psicologia na PUC. Quero muito que a gente divida vários momentos juntos na faculdade.</p>
         <p>Quero te levar pra muitos shows de eletrônica, pra gente curtir muito. E quando a gente ficar mais velho, eu espero que a gente possa ir em várias houses, em todos os lugares do mundo. Eu quero muito ter uma aventura com você.</p>
@@ -1236,9 +1290,15 @@ p,figure{margin:0}
     { e: "🍦", t: "Você é a minha formiguinha: adora um doce, principalmente sorvete. De verdade, claro." },
     { e: "🎈", t: "A leveza que eu tenho pra fazer qualquer coisa e falar qualquer coisa com você." },
     { e: "😚", t: "Eu adoro encher o seu saco… mas também adoro te encher de beijinhos." },
+    { e: "🎁", t: "Poder te mimar sempre que eu consigo." },
     { e: "💃", t: "Como você é criativa. As suas coreografias de dança são uma das coisas mais legais do mundo." },
     { e: "🎓", t: "O seu sonho de fazer psicologia na PUC-Rio. Eu realmente acredito que você vai passar." },
     { e: "💙", t: "Ouvir você falar das coisas que você gosta. Eu presto atenção em tudo, e tudo o que você fala é válido pra mim." },
+    { e: "⚔️", t: "Você é a única pessoa que não me chama de virgem pela história de eu morder a mão achando que ia virar titã KKKKKKK" },
+    { e: "😌", t: "O jeito que você consegue me tranquilizar em qualquer situação." },
+    { e: "👟", t: "As nossas competições saudáveis de caminhada toda semana. Dois competitivos demais KKKKKK" },
+    { e: "🧠", t: "O quanto você é inteligente falando de música. Eu adoro te ouvir, e queria que você falasse mais disso comigo." },
+    { e: "🗺️", t: "O sonho de andar com você por vários lugares, ouvindo música." },
     { e: "💘", t: "Toda vez que eu te beijo e te vejo, eu me apaixono cada vez mais." },
     { e: "⚓", t: "Você é o meu porto seguro." }
   ];
@@ -1248,7 +1308,7 @@ p,figure{margin:0}
     { e: "🧩", t: "De certo jeito, conhece mesmo: a gente se conheceu no LoL muito antes de se ver. E temos tantas coisas em comum… isso me deixa feliz." },
     { e: "💘", t: "E toda vez que eu te beijo e te vejo, eu me apaixono cada vez mais." }
   ];
-  const KEY = "eevee-motivos-v4";
+  const KEY = "eevee-motivos-v6";
 
   /* abas */
   const tabs = [...document.querySelectorAll(".tab")];
@@ -1445,10 +1505,11 @@ p,figure{margin:0}
     { e: "🦋", l: "Life is Strange", t: "Foi o primeiro jogo em comum que a gente falou, e nós dois gostamos." },
     { e: "🎼", l: "Playlist de OSTs", t: "Daí veio a ideia de criar uma playlist de músicas de jogos, as OSTs." },
     { e: "⚔️", l: "Attack on Titan", t: "A gente ama. E você é a única pessoa que não me chama de virgem por eu já ter mordido a minha mão achando que ia virar titã KKKKKKKKKK" },
-    { e: "🎤", l: "K-pop", t: "Você ama grupos coreanos. E eu secretamente ouço k-pop… então fico muito feliz de poder mostrar quem eu verdadeiramente sou pra você." },
+    { e: "🎤", l: "K-pop", t: "Você ama grupos coreanos, e tudo começou com o f(x). E eu secretamente ouço k-pop… então fico muito feliz de poder mostrar quem eu verdadeiramente sou pra você." },
     { e: "🖤", l: "Tudo preto", t: "O seu jeito de se vestir combina com o meu." },
     { e: "🎧", l: "Eletrônica", t: "Eu nunca tinha achado uma mulher que gostasse de eletrônica! Quero te levar pra muitos shows, pra gente curtir muito." },
-    { e: "🎓", l: "PUC-Rio", t: "A minha faculdade, e onde você quer fazer psicologia. Eu realmente acredito que você vai passar, e quero muito dividir vários momentos com você lá." }
+    { e: "🎓", l: "PUC-Rio", t: "A minha faculdade, e onde você quer fazer psicologia. Eu realmente acredito que você vai passar, e quero muito dividir vários momentos com você lá." },
+    { e: "👟", l: "Caminhadas", t: "A gente ama andar, e toda semana tem as nossas competições saudáveis de caminhada (porque nós dois somos competitivos KKKKKK). Meu sonho é andar com você por vários lugares, ouvindo música." }
   ];
   const comboColors = ["--pink", "--lilac", "--vanilla", "--sky", "--mint"];
   const comboTilts = [-3, 2, -2, 3, -1, 2, -3];
@@ -1560,6 +1621,59 @@ p,figure{margin:0}
     showLetter("");
     window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
   }));
+
+  /* aulinha de 7 x 3 */
+  const aulaGrid = document.getElementById("aulaGrid");
+  if (aulaGrid) {
+    const conta = document.getElementById("aulaConta");
+    const exp = document.getElementById("aulaExp");
+    const aulaBtns = [...document.querySelectorAll(".aula-b")];
+    const cells = [];
+    for (let r = 0; r < 3; r++) {
+      for (let c = 0; c < 7; c++) {
+        const cell = document.createElement("span");
+        cell.className = "cell";
+        cell.dataset.r = r;
+        cell.dataset.c = c;
+        cell.innerHTML = '<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#antHead" width="100" height="100"/></svg><b class="num"></b>';
+        aulaGrid.appendChild(cell);
+        cells.push(cell);
+      }
+    }
+    const textos = {
+      linhas: ["7 + 7 + 7 = 21", "São 3 fileiras com 7 formiguinhas em cada uma. 7 + 7 = 14, e 14 + 7 = 21."],
+      colunas: ["3 + 3 + 3 + 3 + 3 + 3 + 3 = 21", "Agora olhando de pé: são 7 colunas com 3 formiguinhas em cada. São as mesmas formiguinhas, então dá 21 de novo. Por isso 7 × 3 é igual a 3 × 7."],
+      contar: ["", "Contando uma por uma também dá 21. A multiplicação é só um jeito mais rápido de contar."]
+    };
+    let timer = null;
+    const setModo = (modo) => {
+      clearInterval(timer);
+      aulaGrid.dataset.mode = modo;
+      aulaBtns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.modo === modo)));
+      cells.forEach((c) => { c.classList.remove("on"); c.querySelector(".num").textContent = ""; });
+      conta.textContent = textos[modo][0];
+      exp.textContent = textos[modo][1];
+      if (modo === "contar") {
+        let i = 0;
+        const step = () => {
+          const c = cells[i];
+          c.classList.add("on");
+          c.querySelector(".num").textContent = i + 1;
+          conta.textContent = i + 1 === cells.length ? "21 formiguinhas! 🐜" : String(i + 1);
+          i++;
+          if (i >= cells.length) clearInterval(timer);
+        };
+        if (reduce) {
+          while (i < cells.length) step();
+        } else {
+          step();
+          timer = setInterval(step, 110);
+        }
+      }
+    };
+    aulaBtns.forEach((b) => b.addEventListener("click", () => setModo(b.dataset.modo)));
+    setModo("linhas");
+  }
 
   /* torcida pro ENEM (8 e 15/11/2026) */
   (() => {
